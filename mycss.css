@@ -1,0 +1,271 @@
+.notes-label {
+margin-bottom: 0;
+padding-botton: 0.4em;
+}
+
+.notes-list {
+margin: 0;
+font-size: 12px
+}
+
+.notes-list li::marker {
+font-size: 12px;
+}
+
+.boxes-container {
+display: flex;
+gap: 20px;
+display: block;
+}
+
+.greenbox-scale {
+border-left: 5px solid #2c5e36;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #ebf5eb;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.greenbox-scale-header {
+display: inline-block;
+background-color: #2c5e36;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.greenbox-scale-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f24e";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.greenbox-scale-content {
+background-color: #ebf5eb;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+
+.videobox {
+border-left: 5px solid #880101;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #FFF8F8;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.videobox-header {
+display: inline-block;
+background-color: #880101;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.videobox-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f144";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.videobox-content {
+background-color: #FFF8F8;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+
+
+.tanbox {
+border-left: 5px solid #3f3208;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #f5f4ddfa;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.tanbox-header {
+display: inline-block;
+background-color: #3f3208;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.tanbox-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f0e3";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.tanbox-content {
+background-color: #f5f4ddfa;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+.bullhorn {
+border-left: 5px solid #4c0f0f;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #f9f5f5;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.bullhorn-header {
+display: inline-block;
+background-color: #4c0f0f;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.bullhorn-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f0a1";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.bullhorn-content {
+background-color: #f9f5f5;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+.notebox {
+border-left: 5px solid #f8da46;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #fdf8dd;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.notebox-header {
+display: inline-block;
+background-color: #f8da46;
+color: black;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.notebox-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f249";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.notebox-content {
+background-color: #fdf8dd;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+
+.tooltip {
+position: relative;
+display: inline-block;
+cursor: help; /* Indicate interactive element */
+border-bottom: 1px dotted black;}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: max-content; /* Adjusts to content, no min-width needed */
+max-width: 250px; /* Limit width for very long tooltips */
+background-color: #e7f6fe;
+color: #0a73a5;
+text-align: left;
+font-size: 14px;
+border: 2px solid #34b4f5;
+border-radius: 5px;
+padding: 5px 10px;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+transform: translateX(-50%); /* Center horizontally */
+opacity: 0;
+transition: opacity 0.3s, visibility 0.3s;
+word-wrap: break-word; /* Ensures long words wrap to the next line */
+pointer-events: auto; /* Allow interactions with tooltip content */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext { /* Add focus for keyboard users */
+visibility: visible;
+opacity: 1;
+}
+
+/* Improved positioning to avoid clipping */
+.tooltip .tooltiptext::before { /* Add a small triangle "arrow" */
+content: "";
+position: absolute;
+bottom: -8px; /* Adjust as needed */
+left: 50%;
+transform: translateX(-50%);
+border-width: 8px 8px 0 8px;
+border-style: solid;
+border-color: #004d80 transparent transparent transparent;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+.tooltip .tooltiptext {
+bottom: 105%; /* Adjust position for smaller screens */
+left: 0;
+transform: translateX(0); /* Align to left on small screens */
+width: 90%;
+max-width: 90%;
+text-align: center;
+}
+
+.tooltip .tooltiptext::before {
+left: 10%;
+}
+}
