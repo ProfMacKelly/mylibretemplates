@@ -1,2 +1,2 @@
 # mylibretemplates
-<a href="testing.html">testing</a>
+[testing.html](https://profmackelly.github.io/mylibretemplates/testing.html)
