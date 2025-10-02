@@ -269,3 +269,50 @@ text-align: center;
 left: 10%;
 }
 }
+
+.collapsible{
+    background-color: #ffd900b7;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: auto;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+   
+}
+.collapsible:hover {
+    background-color: #ffd900;
+}
+.active, collapsible:hover {
+    background-color: #ffd900;
+}
+.collapsible:before {
+    content: '\f107'; /* FontAwesome plus icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    float: left;
+    margin-left: 5px;
+}
+.active:before {
+    content: "\f106"; /* FontAwesome plus icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    float: left;
+    margin-left: 5px;
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fdf8dd;
+    padding: 0 10px;    
+}
+
+ol li {
+      margin-bottom: 0.75em;
+    }
