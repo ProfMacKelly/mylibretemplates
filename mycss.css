@@ -9,6 +9,7 @@ font-size: 12px
 }
 
 .notes-list li::marker {
+content: "[" counter(list-item) "] ";
 font-size: 12px;
 }
 
