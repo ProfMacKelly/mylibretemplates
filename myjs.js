@@ -1,4 +1,4 @@
-  function makeElideNode(innerNodes) {
+function makeElideNode(innerNodes) {
     const wrapper = document.createElement('span');
     wrapper.className = 'elide-wrapper';
 
@@ -6,7 +6,7 @@
     ellipsis.type = 'button';
     ellipsis.className = 'elide-ellipsis';
     ellipsis.setAttribute('aria-expanded', 'false');
-    ellipsis.innerText = '…';
+    ellipsis.innerHTML = '[<strong class="elide-dots">…</strong>]';
 
     const content = document.createElement('span');
     content.className = 'elide-content';
@@ -15,7 +15,7 @@
     const hideBtn = document.createElement('button');
     hideBtn.type = 'button';
     hideBtn.className = 'hide-btn';
-    hideBtn.innerText = '[hide]';
+    hideBtn.innerHTML = '[<span class="hide-word">hide</span>]';
 
     innerNodes.forEach(n => content.appendChild(n));
     content.appendChild(hideBtn);
