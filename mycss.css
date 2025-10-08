@@ -313,3 +313,36 @@ left: 10%;
     background-color: #fdf8dd;
     padding: 0 10px;    
 }
+
+.elide-ellipsis,
+.hide-btn {
+  display: inline;
+  line-height: 1;
+  font-size: 1em;
+  font-weight: normal;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #0000cc; /* Subtle blue cue — adjust as needed */
+  cursor: pointer;
+  text-decoration: none; /* Light underline to signal interactivity */
+}
+
+.elide-ellipsis:hover,
+.hide-btn:hover {
+  color: #004999; /* Darker on hover */
+  text-decoration: underline solid;
+}
+
+.hide-btn .hide-word {
+  font-size: 0.9em;   /* Smaller text inside brackets */
+  font-weight: normal; /* Optional: make it lighter than the brackets */
+  font-style: italic  
+}
+
+.elide-ellipsis strong.elide-dots {
+  /* This ensures the dots are explicitly bold, overriding any parent style */
+  font-weight: bold;
+}
