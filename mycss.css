@@ -133,7 +133,7 @@ padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 10px;
 }
-.bullhorn {
+.read {
 border-left: 5px solid #4c0f0f;
 border-top: none;
 border-right: none;
@@ -143,7 +143,7 @@ background-color: #f9f5f5;
 margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
-.bullhorn-header {
+.read-header {
 display: inline-block;
 background-color: #4c0f0f;
 color: white;
@@ -154,14 +154,14 @@ font-weight: 400;
 border-radius: 0px 0px 0px 0px;
 }
 
-.bullhorn-header::before {
+.read-header::before {
 font-family: "Font Awesome 6 Free";
-content: "\f0a1";
+content: "\f518";
 margin-right: 5px;
 font-weight: 700;
 }
 
-.bullhorn-content {
+.read-content {
 background-color: #f9f5f5;
 font-family: Tahoma;
 font-size: 1.1rem;
