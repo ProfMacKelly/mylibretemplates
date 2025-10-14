@@ -207,6 +207,43 @@ padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 10px;
 }
+.lobjectivesbox {
+border-left: 5px solid #127bc4;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #F1F9FE;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.lobjectivesbox-header {
+display: inline-block;
+background-color: #127bc4;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.lobjectivesbox-header::before {
+font-family: "Font Awesome 5 Pro";
+content: "\f648";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.lobjectivesbox-content {
+background-color: #F1F9FE;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-right: 10px;
+}
 
 .tooltip {
 position: relative;
@@ -401,6 +438,8 @@ any highly specific or inherited global LibreTexts styles.
 /* 1. Target the content containers themselves and the parent boxes */
 .greenbox-scale,
 .greenbox-scale-content,
+.objbox,
+.objbox-content,
 .videobox,
 .videobox-content,
 .tanbox,
@@ -415,7 +454,8 @@ any highly specific or inherited global LibreTexts styles.
 }
 
 /* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
-.greenbox-scale-content *, 
+.greenbox-scale-content *,
+.objbox-content *,
 .videobox-content *,
 .tanbox-content *,
 .read-content *,
