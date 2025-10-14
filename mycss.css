@@ -192,8 +192,8 @@ border-radius: 0px 0px 0px 0px;
 }
 
 .notebox-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f249";
+font-family: "Font Awesome 5 Pro";
+content: "\f044";
 margin-right: 5px;
 font-weight: 700;
 }
