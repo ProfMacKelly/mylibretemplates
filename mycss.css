@@ -438,8 +438,8 @@ any highly specific or inherited global LibreTexts styles.
 /* 1. Target the content containers themselves and the parent boxes */
 .greenbox-scale,
 .greenbox-scale-content,
-.objbox,
-.objbox-content,
+.lobjectivesbox,
+.lobjectivesbox-content,
 .videobox,
 .videobox-content,
 .tanbox,
@@ -455,7 +455,7 @@ any highly specific or inherited global LibreTexts styles.
 
 /* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
 .greenbox-scale-content *,
-.objbox-content *,
+.lobjectivesbox-content *,
 .videobox-content *,
 .tanbox-content *,
 .read-content *,
