@@ -356,7 +356,117 @@ padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 10px;
 }
+.x3box {
+border-left: 5px solid #90f0ff;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #f0fdff;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
 
+.x3box-header {
+display: inline-block;
+background-color: #90f0ff;
+color: black;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.x3box-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f0e3";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.x3box-content {
+background-color: #f0fdff;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+.x4box {
+border-left: 5px solid #ff9100;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #fff4e5;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.x4box-header {
+display: inline-block;
+background-color: #ff9100;
+color: black;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.x4box-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f0e3";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.x4box-content {
+background-color: #fff4e5;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
+.x5box {
+border-left: 5px solid #7c4dff;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #f2edff;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.x5box-header {
+display: inline-block;
+background-color: #7c4dff;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.x5box-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f0e3";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.x5box-content {
+background-color: #f2edff;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
 .tooltip {
 position: relative;
 display: inline-block;
@@ -563,7 +673,13 @@ any highly specific or inherited global LibreTexts styles.
 .x1box,
 .x1box-content,
 .x2box,
-.x2box-content
+.x2box-content,
+.x3box,
+.x3box-content,
+.x4box,
+.x4box-content,
+.x5box,
+.x5box-content,
 .collapsible-content,
 .notes-list {
     line-height: 1.5 !important;
@@ -578,6 +694,9 @@ any highly specific or inherited global LibreTexts styles.
 .notebox-content *,
 .x1box-content *,
 .x2box-content *,
+.x3box-content *,
+.x4box-content *,
+.x5box-content *,
 .collapsible-content *,
 .notes-list * {
     line-height: 1.5 !important; 
