@@ -95,6 +95,7 @@ padding-bottom: 20px;
 padding-right: 10px;
 }
 
+
 .tanbox {
 border-left: 5px solid #3f3208;
 border-top: none;
@@ -243,7 +244,6 @@ padding-top: 8px;
 padding-bottom: 8px;
 padding-right: 10px;
 }
-
 .keybox {
 border-left: 5px solid #3f3208;
 border-top: none;
@@ -253,7 +253,6 @@ border-radius: 5px;
 background-color: #f5f4ddfa;
 margin-bottom: 20px; /* Two line spaces (20px each) */
 }
-
 .keybox-header {
 display: inline-block;
 background-color: #3f3208;
@@ -551,10 +550,8 @@ any highly specific or inherited global LibreTexts styles.
 /* 1. Target the content containers themselves and the parent boxes */
 .greenbox-scale,
 .greenbox-scale-content,
-.objectivesbox,
-.objectivesbox-content,
-.keybox,
-.keybox-content,
+.lobjectivesbox,
+.lobjectivesbox-content,
 .videobox,
 .videobox-content,
 .tanbox,
@@ -563,10 +560,6 @@ any highly specific or inherited global LibreTexts styles.
 .read-content,
 .notebox,
 .notebox-content,
-.x1box,
-.x1box-content,
-.x2box,
-.x2box-content,
 .collapsible-content,
 .notes-list {
     line-height: 1.5 !important;
@@ -574,14 +567,11 @@ any highly specific or inherited global LibreTexts styles.
 
 /* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
 .greenbox-scale-content *,
-.objectivesbox-content *,
-.keybox-content *,
+.lobjectivesbox-content *,
 .videobox-content *,
 .tanbox-content *,
 .read-content *,
 .notebox-content *,
-.x1box-content *,
-.x2box-content *,
 .collapsible-content *,
 .notes-list * {
     line-height: 1.5 !important; 
