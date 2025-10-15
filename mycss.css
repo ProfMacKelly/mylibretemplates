@@ -706,3 +706,39 @@ any highly specific or inherited global LibreTexts styles.
 /* --- END: Line-Height Fix --- */
 /* ---------------------------------------------------------------------------------- */
 } /* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
+/* ---Expandable for Editoral Notes and Attributions and Licensing--- */
+/* 1. Header Styling & Spacing (AFFECTS BOTH) */
+#editorial-header, #attributions-header {
+    font-family: Tahoma, sans-serif !important; 
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #0372a6 !important; 
+    margin-bottom: 0px !important; 
+}
+
+/* 2. Content Styling, Indentation & Slide Transition Prep (AFFECTS BOTH) */
+#editorial-content, #attributions-content {
+    font-family: Tahoma, sans-serif !important; 
+    font-size: 12px !important;
+    
+    padding-left: 25px !important; 
+    margin-top: 5px !important;    
+    
+    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out; 
+    overflow: hidden !important; 
+    height: auto; 
+}
+
+/* 3. Hidden State (Triggers the slide-up/closed state - AFFECTS ALL) */
+.custom-expandable-content.is-hidden {
+    height: 0 !important; 
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 4. Arrow Rotation (AFFECTS BOTH) */
+#editorial-header.is-open #editorial-arrow, 
+#attributions-header.is-open #attributions-arrow {
+    transform: rotate(90deg) !important; 
+}
+/* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */
