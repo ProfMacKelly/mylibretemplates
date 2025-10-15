@@ -69,3 +69,76 @@ function makeElideNode(innerNodes) {
         } 
       });
     }
+/**
+ * Toggles the content with a smooth slide-down/slide-up transition.
+ * @param {HTMLElement} element The content element to slide.
+ * @param {boolean} isOpening True if the content should open (slide down).
+ */
+function slideToggleContent(element, isOpening) {
+    
+    if (isOpening) {
+        // --- OPENING (Slide Down) ---
+        
+        // 1. Ensure the element is visible for height calculation
+        element.style.height = 'auto';
+        
+        // 2. Get the natural height of the content (the actual height)
+        const contentHeight = element.scrollHeight; 
+        
+        // 3. Set height to 0 immediately (this happens too fast to see)
+        element.style.height = '0';
+        
+        // 4. In the next animation frame, set the height to the actual content height
+        // This triggers the CSS transition from 0 to contentHeight
+        requestAnimationFrame(() => {
+            element.style.height = contentHeight + 'px';
+        });
+        
+        // 5. After the transition ends, clear the height so the content can be responsive again
+        element.addEventListener('transitionend', function handler() {
+            element.style.height = 'auto';
+            element.removeEventListener('transitionend', handler);
+        });
+
+    } else {
+        // --- CLOSING (Slide Up) ---
+        
+        // 1. Set the height explicitly to its current size (before changing it to 0)
+        element.style.height = element.scrollHeight + 'px';
+
+        // 2. In the next frame, set the height to 0.
+        // This triggers the CSS transition from current size to 0
+        requestAnimationFrame(() => {
+            element.style.height = '0';
+        });
+
+        // 3. After the transition ends, re-apply the 'is-hidden' class
+        element.addEventListener('transitionend', function handler() {
+             element.classList.add('is-hidden');
+             element.removeEventListener('transitionend', handler);
+        });
+    }
+}
+
+/**
+ * Main toggle function called by the header click.
+ */
+function toggleCustomExpandable(headerId, contentId) {
+    const header = document.getElementById(headerId);
+    const content = document.getElementById(contentId);
+    
+    // Check if the content is currently hidden (has the 'is-hidden' class)
+    const isCurrentlyHidden = content.classList.contains('is-hidden');
+
+    // 1. Toggle the 'is-open' class on the header (Triggers arrow rotation)
+    header.classList.toggle('is-open');
+
+    if (isCurrentlyHidden) {
+        // Opening: Remove the 'is-hidden' class and slide down
+        content.classList.remove('is-hidden');
+        slideToggleContent(content, true);
+    } else {
+        // Closing: Add the 'is-hidden' class only *after* the slide up is complete
+        slideToggleContent(content, false);
+    }
+}
