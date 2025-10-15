@@ -550,8 +550,8 @@ any highly specific or inherited global LibreTexts styles.
 /* 1. Target the content containers themselves and the parent boxes */
 .greenbox-scale,
 .greenbox-scale-content,
-.lobjectivesbox,
-.lobjectivesbox-content,
+.objectivesbox,
+.objectivesbox-content,
 .videobox,
 .videobox-content,
 .tanbox,
@@ -560,6 +560,10 @@ any highly specific or inherited global LibreTexts styles.
 .read-content,
 .notebox,
 .notebox-content,
+.x1box,
+.x1box-content,
+.x2box,
+.x2box-content
 .collapsible-content,
 .notes-list {
     line-height: 1.5 !important;
@@ -567,11 +571,13 @@ any highly specific or inherited global LibreTexts styles.
 
 /* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
 .greenbox-scale-content *,
-.lobjectivesbox-content *,
+.objectivesbox-content *,
 .videobox-content *,
 .tanbox-content *,
 .read-content *,
 .notebox-content *,
+.x1box-content *,
+.x2box-content *,
 .collapsible-content *,
 .notes-list * {
     line-height: 1.5 !important; 
