@@ -358,60 +358,6 @@ padding-bottom: 20px;
 padding-right: 10px;
 }
 
-/* ---------------------------------------------------------------------------------- */
-/* --- START: Line-Height Fix for Custom Boxes (Added to match LibreTexts spacing) --- */
-/* ---------------------------------------------------------------------------------- */
-
-/* This uses the universal selector (*) and !important on all custom content 
-containers to force the wider line-height (1.5) and override 
-any highly specific or inherited global LibreTexts styles.
-*/
-
-/* 1. Target the content containers themselves and the parent boxes */
-.greenbox-scale,
-.greenbox-scale-content,
-.objectivesbox,
-.objectivesbox-content,
-.keybox,
-.keybox-content,
-.videobox,
-.videobox-content,
-.tanbox,
-.tanbox-content,
-.read,
-.read-content,
-.notebox,
-.notebox-content,
-.x1box,
-.x1box-content,
-.x2box,
-.x2box-content,
-.collapsible-content,
-.notes-list {
-    line-height: 1.5 !important;
-}
-
-/* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
-.greenbox-scale-content *,
-.objectivesbox-content *,
-.keybox-content *,
-.videobox-content *,
-.tanbox-content *,
-.read-content *,
-.notebox-content *,
-.x1box-content *,
-.x2box-content *,
-.collapsible-content *,
-.notes-list * {
-    line-height: 1.5 !important; 
-}
-
-/* ---------------------------------------------------------------------------------- */
-/* --- END: Line-Height Fix --- */
-/* ---------------------------------------------------------------------------------- */
-} /* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
-
-
 .tooltip {
 position: relative;
 display: inline-block;
@@ -593,3 +539,55 @@ left: 10%;
     padding: 0 10px;    
 }
 
+/* ---------------------------------------------------------------------------------- */
+/* --- START: Line-Height Fix for Custom Boxes (Added to match LibreTexts spacing) --- */
+/* ---------------------------------------------------------------------------------- */
+
+/* This uses the universal selector (*) and !important on all custom content 
+containers to force the wider line-height (1.5) and override 
+any highly specific or inherited global LibreTexts styles.
+*/
+
+/* 1. Target the content containers themselves and the parent boxes */
+.greenbox-scale,
+.greenbox-scale-content,
+.objectivesbox,
+.objectivesbox-content,
+.keybox,
+.keybox-content,
+.videobox,
+.videobox-content,
+.tanbox,
+.tanbox-content,
+.read,
+.read-content,
+.notebox,
+.notebox-content,
+.x1box,
+.x1box-content,
+.x2box,
+.x2box-content,
+.collapsible-content,
+.notes-list {
+    line-height: 1.5 !important;
+}
+
+/* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
+.greenbox-scale-content *,
+.objectivesbox-content *,
+.keybox-content *,
+.videobox-content *,
+.tanbox-content *,
+.read-content *,
+.notebox-content *,
+.x1box-content *,
+.x2box-content *,
+.collapsible-content *,
+.notes-list * {
+    line-height: 1.5 !important; 
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --- END: Line-Height Fix --- */
+/* ---------------------------------------------------------------------------------- */
+} /* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
