@@ -1,8 +1,60 @@
+/* 1. Define the Bootstrap native font stack (Kept for reference) */
+  :root {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  }
+
+  /* 2. Apply the font family to all common text containers (Kept for reference) */
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  span,
+  ul,
+  ol,
+  li {
+    font-family: var(--bs-font-sans-serif) !important;
+  }
+
+  /* 3. **NEW: Enforce standard font size on box content** */
+  /* This targets the specific content divs inside your custom boxes */
+  .objectivesbox-content,
+  .greenbox-scale-content,
+  .tanbox-content,
+  .read-content,
+  .notebox-content,
+  .keybox-content,
+  .videobox-content,
+  .x1box-content,
+  .x2box-content,
+  .x3box-content,
+  .x4box-content,
+  .x5box-content {
+    /* Sets the font size to the standard size (1rem = typically 16px) */
+    font-size: 1rem !important; 
+    /* Also resetting the line height for better readability */
+    line-height: 1.5 !important;
+  }
+  /* 4. Reset body font size (Kept for reference) */
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 /* ---------------------------------------------------------------------------------- */
 /* --- Namespaced Core Components (All styles prefixed with .book) --- */
 /* ---------------------------------------------------------------------------------- */
 
 .book .notes-label {
+  color: #0372a6;
+  font-size: 13px;
+  font-weight: bold;	
   margin-bottom: 0;
   padding-botton: 0.4em;
 }
@@ -39,8 +91,7 @@
   background-color: #2c5e36;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -54,8 +105,7 @@
 
 .book .greenbox-scale-content {
   background-color: #ebf5eb;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -78,8 +128,7 @@
   background-color: #880101;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -93,8 +142,7 @@
 
 .book .videobox-content {
   background-color: #fff8f8;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -117,8 +165,7 @@
   background-color: #3f3208;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -132,8 +179,8 @@
 
 .book .tanbox-content {
   background-color: #f5f4ddfa;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -156,8 +203,7 @@
   background-color: #4c0f0f;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -171,8 +217,8 @@
 
 .book .read-content {
   background-color: #f9f5f5;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -195,8 +241,7 @@
   background-color: #f8da46;
   color: black;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -210,8 +255,8 @@
 
 .book .notebox-content {
   background-color: #fdf8dd;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -234,8 +279,7 @@
   background-color: #127bc4;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -249,8 +293,7 @@
 
 .book .objectivesbox-content {
   background-color: #f1f9fe;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -272,8 +315,7 @@
   background-color: #3f3208;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -287,8 +329,7 @@
 
 .book .keybox-content {
   background-color: #f5f4ddfa;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -311,8 +352,7 @@
   background-color: #1c547f;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -326,8 +366,8 @@
 
 .book .x1box-content {
   background-color: #e9f7ff;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -350,8 +390,7 @@
   background-color: #5ad47a;
   color: black;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -365,8 +404,8 @@
 
 .book .x2box-content {
   background-color: #eaf9ee;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -389,8 +428,7 @@
   background-color: #90f0ff;
   color: black;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -404,8 +442,8 @@
 
 .book .x3box-content {
   background-color: #f0fdff;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -428,8 +466,7 @@
   background-color: #ff9100;
   color: black;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -443,8 +480,8 @@
 
 .book .x4box-content {
   background-color: #fff4e5;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -467,8 +504,7 @@
   background-color: #7c4dff;
   color: white;
   padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border-radius: 0px 0px 0px 0px;
 }
@@ -482,8 +518,8 @@
 
 .book .x5box-content {
   background-color: #f2edff;
-  font-family: Tahoma;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding-left: 10px;
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -686,8 +722,7 @@
 
 /* ---Expandable for Editoral Notes and Attributions and Licensing--- */
 .book #editorial-header,
-.book #attributions-header {
-  font-family: Tahoma, sans-serif !important;
+.book #attributions-header {  
   font-size: 12px !important;
   font-weight: bold !important;
   color: #0372a6 !important;
@@ -696,7 +731,6 @@
 
 .book #editorial-content,
 .book #attributions-content {
-  font-family: Tahoma, sans-serif !important;
   font-size: 12px !important;
   padding-left: 25px !important;
   margin-top: 5px !important;
