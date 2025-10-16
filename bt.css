@@ -1,0 +1,726 @@
+/* ---------------------------------------------------------------------------------- */
+/* --- Namespaced Core Components (All styles prefixed with .textbook-content) --- */
+/* ---------------------------------------------------------------------------------- */
+
+.textbook-content .notes-label {
+  margin-bottom: 0;
+  padding-botton: 0.4em;
+}
+
+.textbook-content .notes-list {
+  margin: 0;
+  font-size: 12px;
+}
+
+.textbook-content .notes-list li::marker {
+  content: "[" counter(list-item) "] ";
+  font-size: 12px;
+}
+
+.textbook-content .boxes-container {
+  display: flex;
+  gap: 20px;
+  /* NOTE: You had 'display: block;' here after 'display: flex;'.
+       I've removed 'display: block;' to let the 'flex' take effect. 
+       If you intended for it to be a block container, please clarify its purpose.
+    */
+}
+
+/* --- Green Box Scale --- */
+.textbook-content .greenbox-scale {
+  border-left: 5px solid #2c5e36;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #ebf5eb;
+  margin-bottom: 20px;
+}
+
+.textbook-content .greenbox-scale-header {
+  display: inline-block;
+  background-color: #2c5e36;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .greenbox-scale-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f24e";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .greenbox-scale-content {
+  background-color: #ebf5eb;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Video Box --- */
+.textbook-content .videobox {
+  border-left: 5px solid #880101;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  margin-bottom: 20px;
+}
+
+.textbook-content .videobox-header {
+  display: inline-block;
+  background-color: #880101;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .videobox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f144";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .videobox-content {
+  background-color: #fff8f8;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Tan Box --- */
+.textbook-content .tanbox {
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px;
+}
+
+.textbook-content .tanbox-header {
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .tanbox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .tanbox-content {
+  background-color: #f5f4ddfa;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Read Box --- */
+.textbook-content .read {
+  border-left: 5px solid #4c0f0f;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f9f5f5;
+  margin-bottom: 20px;
+}
+
+.textbook-content .read-header {
+  display: inline-block;
+  background-color: #4c0f0f;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .read-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f518";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .read-content {
+  background-color: #f9f5f5;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Note Box --- */
+.textbook-content .notebox {
+  border-left: 5px solid #f8da46;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fdf8dd;
+  margin-bottom: 20px;
+}
+
+.textbook-content .notebox-header {
+  display: inline-block;
+  background-color: #f8da46;
+  color: black;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .notebox-header::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f044";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .notebox-content {
+  background-color: #fdf8dd;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Objectives Box --- */
+.textbook-content .objectivesbox {
+  border-left: 5px solid #127bc4;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f1f9fe;
+  margin-bottom: 20px;
+}
+
+.textbook-content .objectivesbox-header {
+  display: inline-block;
+  background-color: #127bc4;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .objectivesbox-header::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f648";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .objectivesbox-content {
+  background-color: #f1f9fe;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+}
+
+/* --- Key Box --- */
+.textbook-content .keybox {
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px;
+}
+.textbook-content .keybox-header {
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .keybox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f084";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .keybox-content {
+  background-color: #f5f4ddfa;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+}
+
+/* --- X1 Box --- */
+.textbook-content .x1box {
+  border-left: 5px solid #1c547f;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #e9f7ff;
+  margin-bottom: 20px;
+}
+
+.textbook-content .x1box-header {
+  display: inline-block;
+  background-color: #1c547f;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .x1box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .x1box-content {
+  background-color: #e9f7ff;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X2 Box --- */
+.textbook-content .x2box {
+  border-left: 5px solid #5ad47a;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #eaf9ee;
+  margin-bottom: 20px;
+}
+
+.textbook-content .x2box-header {
+  display: inline-block;
+  background-color: #5ad47a;
+  color: black;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .x2box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .x2box-content {
+  background-color: #eaf9ee;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X3 Box --- */
+.textbook-content .x3box {
+  border-left: 5px solid #90f0ff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f0fdff;
+  margin-bottom: 20px;
+}
+
+.textbook-content .x3box-header {
+  display: inline-block;
+  background-color: #90f0ff;
+  color: black;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .x3box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .x3box-content {
+  background-color: #f0fdff;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X4 Box --- */
+.textbook-content .x4box {
+  border-left: 5px solid #ff9100;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff4e5;
+  margin-bottom: 20px;
+}
+
+.textbook-content .x4box-header {
+  display: inline-block;
+  background-color: #ff9100;
+  color: black;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .x4box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .x4box-content {
+  background-color: #fff4e5;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X5 Box --- */
+.textbook-content .x5box {
+  border-left: 5px solid #7c4dff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f2edff;
+  margin-bottom: 20px;
+}
+
+.textbook-content .x5box-header {
+  display: inline-block;
+  background-color: #7c4dff;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.textbook-content .x5box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.textbook-content .x5box-content {
+  background-color: #f2edff;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Tooltip --- */
+.textbook-content .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted black;
+}
+
+.textbook-content .tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  max-width: 250px;
+  background-color: #e7f6fe;
+  color: #0a73a5;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #34b4f5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  word-wrap: break-word;
+  pointer-events: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.textbook-content .tooltip:hover .tooltiptext,
+.textbook-content .tooltip:focus .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.textbook-content .tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #004d80 transparent transparent transparent;
+}
+
+/* --- Media query for smaller screens, scoped to the container --- */
+.textbook-content @media (max-width: 600px) {
+  .textbook-content .tooltip .tooltiptext {
+    bottom: 105%;
+    left: 0;
+    transform: translateX(0);
+    width: 90%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .textbook-content .tooltip .tooltiptext::before {
+    left: 10%;
+  }
+}
+
+/* --- Collapsible (The .active and :hover selectors target the same elements, so they remain together) --- */
+.textbook-content .collapsible {
+  background-color: #ffd900b7;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.textbook-content .collapsible:hover {
+  background-color: #ffd900;
+}
+.textbook-content .active,
+.textbook-content .collapsible:hover {
+  background-color: #ffd900;
+}
+.textbook-content .collapsible:before {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: left;
+  margin-left: 5px;
+}
+.textbook-content .active:before {
+  content: "\f106";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: left;
+  margin-left: 5px;
+}
+.textbook-content .collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fdf8dd;
+  padding: 0 10px;
+}
+
+/* --- Elide/Hide Buttons --- */
+.textbook-content .elide-ellipsis,
+.textbook-content .hide-btn {
+  display: inline;
+  line-height: 1;
+  font-size: 1em;
+  font-weight: normal;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #0000cc;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.textbook-content .elide-ellipsis:hover,
+.textbook-content .hide-btn:hover {
+  color: #004999;
+  text-decoration: underline solid;
+}
+
+.textbook-content .hide-btn .hide-word {
+  font-size: 0.9em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.textbook-content .elide-ellipsis strong.elide-dots {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --- START: Line-Height Fix for Custom Boxes (Scoped to .textbook-content) --- */
+/* ---------------------------------------------------------------------------------- */
+
+/* 1. Target the content containers themselves and the parent boxes */
+.textbook-content .greenbox-scale,
+.textbook-content .greenbox-scale-content,
+.textbook-content .objectivesbox,
+.textbook-content .objectivesbox-content,
+.textbook-content .videobox,
+.textbook-content .videobox-content,
+.textbook-content .tanbox,
+.textbook-content .tanbox-content,
+.textbook-content .read,
+.textbook-content .read-content,
+.textbook-content .notebox,
+.textbook-content .notebox-content,
+.textbook-content .x1box,
+.textbook-content .x1box-content,
+.textbook-content .x2box,
+.textbook-content .x2box-content,
+.textbook-content .x3box,
+.textbook-content .x3box-content,
+.textbook-content .x4box,
+.textbook-content .x4box-content,
+.textbook-content .x5box,
+.textbook-content .x5box-content,
+.textbook-content .collapsible-content,
+.textbook-content .notes-list {
+  line-height: 1.5 !important;
+}
+
+/* 2. Target ALL descendant elements (*) inside the custom content blocks */
+.textbook-content .greenbox-scale-content *,
+.textbook-content .objectivesbox-content *,
+.textbook-content .videobox-content *,
+.textbook-content .tanbox-content *,
+.textbook-content .read-content *,
+.textbook-content .notebox-content *,
+.textbook-content .x1box-content *,
+.textbook-content .x2box-content *,
+.textbook-content .x3box-content *,
+.textbook-content .x4box-content *,
+.textbook-content .x5box-content *,
+.textbook-content .collapsible-content *,
+.textbook-content .notes-list * {
+  line-height: 1.5 !important;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --- END: Line-Height Fix --- */
+/* ---------------------------------------------------------------------------------- */
+
+/* ---Expandable for Editoral Notes and Attributions and Licensing--- */
+/* These use IDs, so we will still prefix them just to be safe, but 
+   IDs are inherently specific. The key is ensuring they don't affect 
+   any global elements if the host site happened to use the same IDs 
+   outside your main content container. */
+
+.textbook-content #editorial-header,
+.textbook-content #attributions-header {
+  font-family: Tahoma, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: 0px !important;
+}
+
+.textbook-content #editorial-content,
+.textbook-content #attributions-content {
+  font-family: Tahoma, sans-serif !important;
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  margin-top: 5px !important;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.textbook-content .custom-expandable-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.textbook-content #editorial-header.is-open #editorial-arrow,
+.textbook-content #attributions-header.is-open #attributions-arrow {
+  transform: rotate(90deg) !important;
+}
+/* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */
