@@ -1,0 +1,754 @@
+/* 1. Define the Bootstrap native font stack (Kept for reference) */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem; /* Default font size (usually 16px) */
+    font-weight: 400; /* Default font weight */
+    line-height: 1.5; /* Default line height for readability */
+  }
+
+  /* 2. Apply the font family to all common text containers (Kept for reference) */
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  span,
+  ul,
+  ol,
+  li {
+    font-family: var(--bs-font-sans-serif) !important;
+  }
+
+  /* 3. **NEW: Enforce standard font size on box content** */
+  /* This targets the specific content divs inside your custom boxes */
+  .objectivesbox-content,
+  .greenbox-scale-content,
+  .tanbox-content,
+  .read-content,
+  .notebox-content,
+  .keybox-content,
+  .videobox-content,
+  .x1box-content,
+  .x2box-content,
+  .x3box-content,
+  .x4box-content,
+  .x5box-content {
+    /* Sets the font size to the standard size (1rem = typically 16px) */
+    font-size: 1rem !important; 
+    /* Also resetting the line height for better readability */
+    line-height: 1.5 !important;
+  }
+  /* 4. Reset body font size (Kept for reference) */
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+/* ---------------------------------------------------------------------------------- */
+/* --- Namespaced Core Components (All styles prefixed with .book) --- */
+/* ---------------------------------------------------------------------------------- */
+
+.book .notes-label {
+  color: #0372a6;
+  font-size: 13px;
+  font-weight: bold;	
+  margin-bottom: 0;
+  padding-botton: 0.4em;
+}
+
+.book .notes-list {
+  margin: 0;
+  font-size: 12px;
+}
+
+.book .notes-list li::marker {
+  content: "[" counter(list-item) "] ";
+  font-size: 12px;
+}
+
+.book .boxes-container {
+  display: flex;
+  gap: 20px;
+  /* Removed 'display: block;' to let 'display: flex;' take effect. */
+}
+
+/* --- Green Box Scale --- */
+.book .greenbox-scale {
+  border-left: 5px solid #2c5e36;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #ebf5eb;
+  margin-bottom: 20px;
+}
+
+.book .greenbox-scale-header {
+  display: inline-block;
+  background-color: #2c5e36;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .greenbox-scale-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f24e";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .greenbox-scale-content {
+  background-color: #ebf5eb;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Video Box --- */
+.book .videobox {
+  border-left: 5px solid #880101;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  margin-bottom: 20px;
+}
+
+.book .videobox-header {
+  display: inline-block;
+  background-color: #880101;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .videobox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f144";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .videobox-content {
+  background-color: #fff8f8;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Tan Box --- */
+.book .tanbox {
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px;
+}
+
+.book .tanbox-header {
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .tanbox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .tanbox-content {
+  background-color: #f5f4ddfa;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Read Box --- */
+.book .read {
+  border-left: 5px solid #4c0f0f;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f9f5f5;
+  margin-bottom: 20px;
+}
+
+.book .read-header {
+  display: inline-block;
+  background-color: #4c0f0f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .read-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f518";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .read-content {
+  background-color: #f9f5f5;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Note Box --- */
+.book .notebox {
+  border-left: 5px solid #f8da46;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fdf8dd;
+  margin-bottom: 20px;
+}
+
+.book .notebox-header {
+  display: inline-block;
+  background-color: #f8da46;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .notebox-header::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f044";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .notebox-content {
+  background-color: #fdf8dd;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Objectives Box --- */
+.book .objectivesbox {
+  border-left: 5px solid #127bc4;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f1f9fe;
+  margin-bottom: 20px;
+}
+
+.book .objectivesbox-header {
+  display: inline-block;
+  background-color: #127bc4;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .objectivesbox-header::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f648";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .objectivesbox-content {
+  background-color: #f1f9fe;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+}
+
+/* --- Key Box --- */
+.book .keybox {
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px;
+}
+.book .keybox-header {
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .keybox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f084";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .keybox-content {
+  background-color: #f5f4ddfa;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+}
+
+/* --- X1 Box --- */
+.book .x1box {
+  border-left: 5px solid #1c547f;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #e9f7ff;
+  margin-bottom: 20px;
+}
+
+.book .x1box-header {
+  display: inline-block;
+  background-color: #1c547f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .x1box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .x1box-content {
+  background-color: #e9f7ff;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X2 Box --- */
+.book .x2box {
+  border-left: 5px solid #5ad47a;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #eaf9ee;
+  margin-bottom: 20px;
+}
+
+.book .x2box-header {
+  display: inline-block;
+  background-color: #5ad47a;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .x2box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .x2box-content {
+  background-color: #eaf9ee;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X3 Box --- */
+.book .x3box {
+  border-left: 5px solid #90f0ff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f0fdff;
+  margin-bottom: 20px;
+}
+
+.book .x3box-header {
+  display: inline-block;
+  background-color: #90f0ff;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .x3box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .x3box-content {
+  background-color: #f0fdff;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X4 Box --- */
+.book .x4box {
+  border-left: 5px solid #ff9100;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff4e5;
+  margin-bottom: 20px;
+}
+
+.book .x4box-header {
+  display: inline-block;
+  background-color: #ff9100;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .x4box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .x4box-content {
+  background-color: #fff4e5;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- X5 Box --- */
+.book .x5box {
+  border-left: 5px solid #7c4dff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f2edff;
+  margin-bottom: 20px;
+}
+
+.book .x5box-header {
+  display: inline-block;
+  background-color: #7c4dff;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.book .x5box-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.book .x5box-content {
+  background-color: #f2edff;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* --- Tooltip --- */
+.book .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted black;
+}
+
+.book .tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  max-width: 250px;
+  background-color: #e7f6fe;
+  color: #0a73a5;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #34b4f5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  word-wrap: break-word;
+  pointer-events: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book .tooltip:hover .tooltiptext,
+.book .tooltip:focus .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.book .tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #004d80 transparent transparent transparent;
+}
+
+/* --- Media query for smaller screens, scoped to the container --- */
+.book @media (max-width: 600px) {
+  .book .tooltip .tooltiptext {
+    bottom: 105%;
+    left: 0;
+    transform: translateX(0);
+    width: 90%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .book .tooltip .tooltiptext::before {
+    left: 10%;
+  }
+}
+
+/* --- Collapsible (The .active and :hover selectors target the same elements, so they remain together) --- */
+.book .collapsible {
+  background-color: #ffd900b7;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.book .collapsible:hover {
+  background-color: #ffd900;
+}
+.book .active,
+.book .collapsible:hover {
+  background-color: #ffd900;
+}
+.book .collapsible:before {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: left;
+  margin-left: 5px;
+}
+.book .active:before {
+  content: "\f106";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: left;
+  margin-left: 5px;
+}
+.book .collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fdf8dd;
+  padding: 0 10px;
+}
+
+/* --- Elide/Hide Buttons --- */
+.book .elide-ellipsis,
+.book .hide-btn {
+  display: inline;
+  line-height: 1;
+  font-size: 1em;
+  font-weight: normal;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #0000cc;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.book .elide-ellipsis:hover,
+.book .hide-btn:hover {
+  color: #004999;
+  text-decoration: underline solid;
+}
+
+.book .hide-btn .hide-word {
+  font-size: 0.9em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.book .elide-ellipsis strong.elide-dots {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --- START: Line-Height Fix for Custom Boxes (Scoped to .book) --- */
+/* ---------------------------------------------------------------------------------- */
+
+/* 1. Target the content containers themselves and the parent boxes */
+.book .greenbox-scale,
+.book .greenbox-scale-content,
+.book .objectivesbox,
+.book .objectivesbox-content,
+.book .videobox,
+.book .videobox-content,
+.book .tanbox,
+.book .tanbox-content,
+.book .read,
+.book .read-content,
+.book .notebox,
+.book .notebox-content,
+.book .x1box,
+.book .x1box-content,
+.book .x2box,
+.book .x2box-content,
+.book .x3box,
+.book .x3box-content,
+.book .x4box,
+.book .x4box-content,
+.book .x5box,
+.book .x5box-content,
+.book .collapsible-content,
+.book .notes-list {
+  line-height: 1.5 !important;
+}
+
+/* 2. Target ALL descendant elements (*) inside the custom content blocks */
+.book .greenbox-scale-content *,
+.book .objectivesbox-content *,
+.book .videobox-content *,
+.book .tanbox-content *,
+.book .read-content *,
+.book .notebox-content *,
+.book .x1box-content *,
+.book .x2box-content *,
+.book .x3box-content *,
+.book .x4box-content *,
+.book .x5box-content *,
+.book .collapsible-content *,
+.book .notes-list * {
+  line-height: 1.5 !important;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --- END: Line-Height Fix --- */
+/* ---------------------------------------------------------------------------------- */
+
+/* ---Expandable for Editoral Notes and Attributions and Licensing--- */
+.book #editorial-header,
+.book #attributions-header {  
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: 0px !important;
+}
+
+.book #editorial-content,
+.book #attributions-content {
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  margin-top: 5px !important;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.book .custom-expandable-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.book #editorial-header.is-open #editorial-arrow,
+.book #attributions-header.is-open #attributions-arrow {
+  transform: rotate(90deg) !important;
+}
+/* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */
