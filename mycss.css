@@ -95,6 +95,43 @@ padding-bottom: 20px;
 padding-right: 10px;
 }
 
+.listenbox {
+border-left: 5px solid #880101;
+border-top: none;
+border-right: none;
+border-bottom: none;
+border-radius: 5px;
+background-color: #FFF8F8;
+margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.listenbox-header {
+display: inline-block;
+background-color: #880101;
+color: white;
+padding: 5px 10px;
+font-family: Tahoma;
+font-size: 1.2rem;
+font-weight: 400;
+border-radius: 0px 0px 0px 0px;
+}
+
+.listenbox-header::before {
+font-family: "Font Awesome 6 Free";
+content: "\f025";
+margin-right: 5px;
+font-weight: 700;
+}
+
+.listenbox-content {
+background-color: #FFF8F8;
+font-family: Tahoma;
+font-size: 1.1rem;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+}
 
 .tanbox {
 border-left: 5px solid #3f3208;
