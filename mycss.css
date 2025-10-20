@@ -244,6 +244,12 @@ padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 10px;
 }
+
+.objectivesbox-content ol {
+  padding-left: 1.5em; /* adds space for numbers */
+  margin: 0; /* optional — ensures consistent spacing */
+}
+
 .objectivesbox {
 border-left: 5px solid #127bc4;
 border-top: none;
