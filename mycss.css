@@ -769,15 +769,15 @@ left: 10%;
     background-color: #ffd900;
 }
 .collapsible:before {
-    content: '\f054'; /* FontAwesome 7 Free icon */
-    font-family: 'Font Awesome 6 Free';
+    content: "\f054"; /* FontAwesome 7 Free icon */
+    font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     float: left;
     margin-left: 5px;
 }
 .active:before {
     content: "\f078"; /* FontAwesome 7 Free icon */
-    font-family: 'Font Awesome 6 Free';
+    font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     float: left;
     margin-left: 5px;
@@ -847,15 +847,15 @@ left: 10%;
     background-color: #ffd900;
 }
 .collapsible:before {
-    content: '\f107'; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
+    content: "\f054"; /* FontAwesome plus icon */
+    font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     float: left;
     margin-left: 5px;
 }
 .active:before {
-    content: "\f106"; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
+    content: "\f078"; /* FontAwesome plus icon */
+    font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     float: left;
     margin-left: 5px;
