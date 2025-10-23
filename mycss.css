@@ -1,578 +1,802 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Footnotes */
 .notes-label {
-margin-bottom: 0;
-padding-botton: 0.4em;
+  margin-bottom: 0;
+  padding-botton: 0.4em;
+  font-size: 14px;
 }
 
 .notes-list {
-margin: 0;
-font-size: 12px
+  margin: 0;
+  font-size: 12px;
 }
 
 .notes-list li::marker {
-content: "[" counter(list-item) "] ";
-font-size: 12px;
+  content: "[" counter(list-item) "] ";
+  font-size: 12px;
 }
 
+/* Admonitions/New Boxes */
+.container {
+  max-width: full;
+  margin: 0 auto;
+}
+
+.admon {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid;
+}
+
+.admon-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.admon-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.admon-title {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.admon-body {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.admon-body ol {
+  padding-left: 1em; /* gives space for the numbers */
+  margin: 0; /* optional: keeps spacing tidy */
+}
+
+.admon-body ul {
+  padding-left: 1em; /* gives space for the numbers */
+  margin: 0; /* optional: keeps spacing tidy */
+}
+
+/* Note admon */
+.admon-note {
+  border-color: #decc8b;
+}
+
+.admon-note .admon-icon::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f044";
+  font-size: 1.1em;
+  color: black;
+  font-weight: 900;
+}
+
+.admon-note .admon-header {
+  background-color: #ffeba1;
+  color: black;
+}
+
+/* Tip admon - Material theme uses teal */
+.admon-tip {
+  border-color: #00bcd4;
+}
+
+.admon-tip .admon-header {
+  background-color: #00bcd4;
+}
+
+/* Info admon - Material theme uses blue */
+.admon-info {
+  border-color: #2196f3;
+}
+
+.admon-info .admon-header {
+  background-color: #2196f3;
+}
+
+/* Success admon - Material theme uses green */
+.admon-success {
+  border-color: #4caf50;
+}
+
+.admon-success .admon-header {
+  background-color: #4caf50;
+}
+
+/* Warning admon - Material theme uses orange */
+.admon-warning {
+  border-color: #ff9800;
+}
+
+.admon-warning .admon-header {
+  background-color: #ff9800;
+}
+
+/* Case in Point admon - Material theme uses red */
+.admon-case {
+  border-color: #aaa691;
+}
+
+.admon-case .admon-icon::before {
+  font-family: "Font Awesome 7 Free";
+  content: "\f0e3";
+  font-size: 1.2em;
+  font-weight: 900;
+  color: black;
+}
+
+.admon-case .admon-header {
+  background-color: #e5e0c4;
+  color: black;
+}
+
+/* Important admon - Material theme uses pink */
+.admon-important {
+  border-color: #e91e63;
+}
+
+.admon-important .admon-header {
+  background-color: #e91e63;
+}
+
+/* Caution admon - Material theme uses deep orange */
+.admon-caution {
+  border-color: #ff5722;
+}
+
+.admon-caution .admon-header {
+  background-color: #ff5722;
+}
+
+/* Watch and Learn admon - Material theme uses deep orange */
+.admon-video {
+  border-color: #dd4f40;
+}
+
+.admon-video .admon-header {
+  background-color: #be0000;
+  color: white;
+}
+
+/* Sidebar admon - Material theme uses deep orange */
+.admon-sidebar {
+  border-color: #9cbfb5;
+}
+
+.admon-sidebar .admon-header {
+  background-color: #e6efec;
+  color: #202e2a;
+}
+
+/* Listen admon - Material theme uses deep orange */
+.admon-listen {
+  border-color: #ad5fcf;
+}
+
+.admon-listen .admon-header {
+  background-color: #efcbff;
+  color: black;
+}
+
+/* Objectives admon */
+.admon-objectives .admon-icon::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f648";
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+}
+
+.admon-objectives {
+  border-color: #68a3d8;
+}
+
+.admon-objectives .admon-header {
+  background-color: #127bc4;
+}
+
+/* Key Takeaways admon - Material theme uses deep orange */
+.admon-keys {
+  border-color: #3f3208;
+}
+
+.admon-keys .admon-icon::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f084";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+}
+
+.admon-keys .admon-header {
+  background-color: #3d2b1f;
+}
+
+/* Key Takeaways admon - Material theme uses deep orange */
+.admon-read {
+  border-color: #bda89b;
+}
+
+.admon-read .admon-header {
+  background-color: #f6f3f1;
+  color: #130400;
+}
+
+/* Example admon */
+.admon-example {
+  border-color: #afd9f0;
+}
+
+.admon-example .admon-icon::before {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  content: "\e53d";
+  color: #002c42;
+  font-size: 1.2em;
+}
+
+.admon-example .admon-header {
+  background-color: #e3f4ff;
+  color: black;
+}
+
+/* Exercise admon */
+.admon-exercise {
+  border-color: #a5b9da;
+}
+
+.admon-exercise .admon-header {
+  background-color: #f5f8ff;
+  color: #143160;
+}
+.usage-section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.usage-section h2 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+pre {
+  background-color: #f8f9fa;
+  padding: 18px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 15px 0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  border-left: 4px solid #3f51b5;
+}
+
+code {
+  background-color: #f8f9fa;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  color: #d63384;
+}
+
+.code-example {
+  margin: 25px 0;
+}
+
+.code-example h3 {
+  color: #3f51b5;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .admons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admon-header {
+    padding: 12px 14px;
+  }
+
+  .admon-body {
+    padding: 16px;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+}
+
+.icon-reference {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.icon-reference h2 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.icon-item .material-icons {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Old Boxes */
 .boxes-container {
-display: flex;
-gap: 20px;
-display: block;
+  display: flex;
+  gap: 20px;
+  display: block;
 }
 
 .greenbox-scale {
-border-left: 5px solid #2c5e36;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #ebf5eb;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #2c5e36;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #ebf5eb;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .greenbox-scale-header {
-display: inline-block;
-background-color: #2c5e36;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #2c5e36;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .greenbox-scale-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f24e";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: "\f24e";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .greenbox-scale-content {
-background-color: #ebf5eb;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
+  background-color: #ebf5eb;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 
 .videobox {
-border-left: 5px solid #880101;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #FFF8F8;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #880101;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .videobox-header {
-display: inline-block;
-background-color: #880101;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #880101;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .videobox-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f144";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: "\f144";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .videobox-content {
-background-color: #FFF8F8;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
+  background-color: #fff8f8;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 
+.listenbox {
+  border-left: 5px solid #880101;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
+}
+
+.listenbox-header {
+  display: inline-block;
+  background-color: #880101;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.listenbox-header::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f025";
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.listenbox-content {
+  background-color: #fff8f8;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
 
 .tanbox {
-border-left: 5px solid #3f3208;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #f5f4ddfa;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .tanbox-header {
-display: inline-block;
-background-color: #3f3208;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .tanbox-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: "\f0e3";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .tanbox-content {
-background-color: #f5f4ddfa;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
+  background-color: #f5f4ddfa;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 .read {
-border-left: 5px solid #4c0f0f;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #f9f5f5;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #4c0f0f;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f9f5f5;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .read-header {
-display: inline-block;
-background-color: #4c0f0f;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #4c0f0f;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .read-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f518";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: "\f518";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .read-content {
-background-color: #f9f5f5;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
+  background-color: #f9f5f5;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 .notebox {
-border-left: 5px solid #f8da46;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #fdf8dd;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #f8da46;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #fdf8dd;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .notebox-header {
-display: inline-block;
-background-color: #f8da46;
-color: black;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #f8da46;
+  color: black;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .notebox-header::before {
-font-family: "Font Awesome 5 Pro";
-content: "\f044";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 5 Pro";
+  content: "\f044";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .notebox-content {
-background-color: #fdf8dd;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
+  background-color: #fdf8dd;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
+
+.objectivesbox-content ol {
+  padding-left: 1.5em; /* adds space for numbers */
+  margin: 0; /* optional — ensures consistent spacing */
+}
+
 .objectivesbox {
-border-left: 5px solid #127bc4;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #F1F9FE;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #127bc4;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f1f9fe;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 
 .objectivesbox-header {
-display: inline-block;
-background-color: #127bc4;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #127bc4;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .objectivesbox-header::before {
-font-family: "Font Awesome 5 Pro";
-content: "\f648";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 5 Pro";
+  content: "\f648";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .objectivesbox-content {
-background-color: #F1F9FE;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 8px;
-padding-bottom: 8px;
-padding-right: 10px;
+  background-color: #f1f9fe;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
 }
 .keybox {
-border-left: 5px solid #3f3208;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #f5f4ddfa;
-margin-bottom: 20px; /* Two line spaces (20px each) */
+  border-left: 5px solid #3f3208;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px;
+  background-color: #f5f4ddfa;
+  margin-bottom: 20px; /* Two line spaces (20px each) */
 }
 .keybox-header {
-display: inline-block;
-background-color: #3f3208;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  background-color: #3f3208;
+  color: white;
+  padding: 5px 10px;
+  font-family: Tahoma;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .keybox-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f084";
-margin-right: 5px;
-font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: "\f084";
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .keybox-content {
-background-color: #f5f4ddfa;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 8px;
-padding-bottom: 8px;
-padding-right: 10px;
+  background-color: #f5f4ddfa;
+  font-family: Tahoma;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
 }
 
-.x1box {
-border-left: 5px solid #1c547f;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #e9f7ff;
-margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.x1box-header {
-display: inline-block;
-background-color: #1c547f;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
-}
-
-.x1box-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
-}
-
-.x1box-content {
-background-color: #e9f7ff;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
-}
-
-.x2box {
-border-left: 5px solid #5ad47a;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #eaf9ee;
-margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.x2box-header {
-display: inline-block;
-background-color: #5ad47a;
-color: black;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
-}
-
-.x2box-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
-}
-
-.x2box-content {
-background-color: #eaf9ee;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
-}
-.x3box {
-border-left: 5px solid #90f0ff;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #f0fdff;
-margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.x3box-header {
-display: inline-block;
-background-color: #90f0ff;
-color: black;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
-}
-
-.x3box-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
-}
-
-.x3box-content {
-background-color: #f0fdff;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
-}
-.x4box {
-border-left: 5px solid #ff9100;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #fff4e5;
-margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.x4box-header {
-display: inline-block;
-background-color: #ff9100;
-color: black;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
-}
-
-.x4box-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
-}
-
-.x4box-content {
-background-color: #fff4e5;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
-}
-.x5box {
-border-left: 5px solid #7c4dff;
-border-top: none;
-border-right: none;
-border-bottom: none;
-border-radius: 5px;
-background-color: #f2edff;
-margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.x5box-header {
-display: inline-block;
-background-color: #7c4dff;
-color: white;
-padding: 5px 10px;
-font-family: Tahoma;
-font-size: 1.2rem;
-font-weight: 400;
-border-radius: 0px 0px 0px 0px;
-}
-
-.x5box-header::before {
-font-family: "Font Awesome 6 Free";
-content: "\f0e3";
-margin-right: 5px;
-font-weight: 700;
-}
-
-.x5box-content {
-background-color: #f2edff;
-font-family: Tahoma;
-font-size: 1.1rem;
-padding-left: 10px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 10px;
-}
+/* Tooltips */
 .tooltip {
-position: relative;
-display: inline-block;
-cursor: help; /* Indicate interactive element */
-border-bottom: 1px dotted black;}
+  position: relative;
+  display: inline-block;
+  cursor: help; /* Indicate interactive element */
+  border-bottom: 1px dotted black;
+}
 
 .tooltip .tooltiptext {
-visibility: hidden;
-width: max-content; /* Adjusts to content, no min-width needed */
-max-width: 250px; /* Limit width for very long tooltips */
-background-color: #e7f6fe;
-color: #0a73a5;
-text-align: left;
-font-size: 14px;
-border: 2px solid #34b4f5;
-border-radius: 5px;
-padding: 5px 10px;
-position: absolute;
-z-index: 1;
-bottom: 125%;
-left: 50%;
-transform: translateX(-50%); /* Center horizontally */
-opacity: 0;
-transition: opacity 0.3s, visibility 0.3s;
-word-wrap: break-word; /* Ensures long words wrap to the next line */
-pointer-events: auto; /* Allow interactions with tooltip content */
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  visibility: hidden;
+  width: max-content; /* Adjusts to content, no min-width needed */
+  max-width: 250px; /* Limit width for very long tooltips */
+  background-color: #e7f6fe;
+  color: #0a73a5;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #34b4f5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  word-wrap: break-word; /* Ensures long words wrap to the next line */
+  pointer-events: auto; /* Allow interactions with tooltip content */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .tooltip:hover .tooltiptext,
-.tooltip:focus .tooltiptext { /* Add focus for keyboard users */
-visibility: visible;
-opacity: 1;
+.tooltip:focus .tooltiptext {
+  /* Add focus for keyboard users */
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Improved positioning to avoid clipping */
-.tooltip .tooltiptext::before { /* Add a small triangle "arrow" */
-content: "";
-position: absolute;
-bottom: -8px; /* Adjust as needed */
-left: 50%;
-transform: translateX(-50%);
-border-width: 8px 8px 0 8px;
-border-style: solid;
-border-color: #004d80 transparent transparent transparent;
+.tooltip .tooltiptext::before {
+  /* Add a small triangle "arrow" */
+  content: "";
+  position: absolute;
+  bottom: -8px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #004d80 transparent transparent transparent;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
-.tooltip .tooltiptext {
-bottom: 105%; /* Adjust position for smaller screens */
-left: 0;
-transform: translateX(0); /* Align to left on small screens */
-width: 90%;
-max-width: 90%;
-text-align: center;
+  .tooltip .tooltiptext {
+    bottom: 105%; /* Adjust position for smaller screens */
+    left: 0;
+    transform: translateX(0); /* Align to left on small screens */
+    width: 90%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .tooltip .tooltiptext::before {
+    left: 10%;
+  }
 }
 
-.tooltip .tooltiptext::before {
-left: 10%;
-}
+/* Collapsible */
+.collapsible {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  padding: 0.9em 1em;
+  background-color: #edffeb;
+  color: #002c07;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: background-color 0.3s ease;
 }
 
-.collapsible{
-    background-color: #ffd900b7;
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    width: auto;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-   
-}
 .collapsible:hover {
-    background-color: #ffd900;
+  background-color: #d9ffdb;
 }
-.active, collapsible:hover {
-    background-color: #ffd900;
+.active,
+.collapsible:hover {
+  background-color: #d9ffdb;
 }
 .collapsible:before {
-    content: '\f107'; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    float: left;
-    margin-left: 5px;
+  content: "\2b"; /* FontAwesome 7 Free icon */
+  font-family: "Font Awesome 7 Free";
+  font-weight: 600;
+  font-size: 0.6em;
+  float: left;
+  margin-left: 5px;
 }
 .active:before {
-    content: "\f106"; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    float: left;
-    margin-left: 5px;
-}
-.collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: #fdf8dd;
-    padding: 0 10px;    
+  content: "\f068"; /* FontAwesome 7 Free icon */
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  float: left;
+  margin-left: 5px;
 }
 
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f8fff8;
+  padding: 0 10px;
+}
+
+/* Elissions/Ellipsis */
 .elide-ellipsis,
 .hide-btn {
   display: inline;
@@ -596,56 +820,14 @@ left: 10%;
 }
 
 .hide-btn .hide-word {
-  font-size: 0.9em;   /* Smaller text inside brackets */
+  font-size: 0.9em; /* Smaller text inside brackets */
   font-weight: normal; /* Optional: make it lighter than the brackets */
-  font-style: italic  
+  font-style: italic;
 }
 
 .elide-ellipsis strong.elide-dots {
   /* This ensures the dots are explicitly bold, overriding any parent style */
   font-weight: bold;
-}
-.collapsible{
-    background-color: #ffd900b7;
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    width: auto;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-   
-}
-.collapsible:hover {
-    background-color: #ffd900;
-}
-.active, collapsible:hover {
-    background-color: #ffd900;
-}
-.collapsible:before {
-    content: '\f107'; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    float: left;
-    margin-left: 5px;
-}
-.active:before {
-    content: "\f106"; /* FontAwesome plus icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    float: left;
-    margin-left: 5px;
-}
-.collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: #fdf8dd;
-    padding: 0 10px;    
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -682,7 +864,7 @@ any highly specific or inherited global LibreTexts styles.
 .x5box-content,
 .collapsible-content,
 .notes-list {
-    line-height: 1.5 !important;
+  line-height: 1.5 !important;
 }
 
 /* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
@@ -699,46 +881,50 @@ any highly specific or inherited global LibreTexts styles.
 .x5box-content *,
 .collapsible-content *,
 .notes-list * {
-    line-height: 1.5 !important; 
+  line-height: 1.5 !important;
 }
 
 /* ---------------------------------------------------------------------------------- */
 /* --- END: Line-Height Fix --- */
 /* ---------------------------------------------------------------------------------- */
-} /* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
+/* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
 /* ---Expandable for Editoral Notes and Attributions and Licensing--- */
 /* 1. Header Styling & Spacing (AFFECTS BOTH) */
-#editorial-header, #attributions-header {
-    font-family: Tahoma, sans-serif !important; 
-    font-size: 12px !important;
-    font-weight: bold !important;
-    color: #0372a6 !important; 
-    margin-bottom: 0px !important; 
+#editorial-header,
+#attributions-header {
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: 0px !important;
 }
 
 /* 2. Content Styling, Indentation & Slide Transition Prep (AFFECTS BOTH) */
-#editorial-content, #attributions-content {
-    font-family: Tahoma, sans-serif !important; 
-    font-size: 12px !important;
-    
-    padding-left: 25px !important; 
-    margin-top: 5px !important;    
-    
-    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out; 
-    overflow: hidden !important; 
-    height: auto; 
+#editorial-content,
+#attributions-content {
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+
+  padding-left: 25px !important;
+  margin-top: 5px !important;
+
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
 }
 
 /* 3. Hidden State (Triggers the slide-up/closed state - AFFECTS ALL) */
 .custom-expandable-content.is-hidden {
-    height: 0 !important; 
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* 4. Arrow Rotation (AFFECTS BOTH) */
-#editorial-header.is-open #editorial-arrow, 
+#editorial-header.is-open #editorial-arrow,
 #attributions-header.is-open #attributions-arrow {
-    transform: rotate(90deg) !important; 
+  transform: rotate(90deg) !important;
 }
 /* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */

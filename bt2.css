@@ -1,15 +1,16 @@
 /* 1. Define the Bootstrap native font stack (Kept for reference) */
-  :root {
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem; /* Default font size (usually 16px) */
+    font-weight: 400; /* Default font weight */
+    line-height: 1.5; /* Default line height for readability */
   }
 
   /* 2. Apply the font family to all common text containers (Kept for reference) */
   body,
   p,
-  h1,
   h2,
   h3,
   h4,

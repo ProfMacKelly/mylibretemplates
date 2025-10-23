@@ -1,12 +1,12 @@
 /**
  * Scoped Custom JavaScript for Textbook Components
  * All component initialization is restricted to elements within
- * the main '.textbook-content' container for cross-platform safety.
+ * the main '.book' container for cross-platform safety.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Identify the main textbook content container
-  const textbookContainer = document.querySelector(".textbook-content");
+  // 1. Identify the main textbook content container using the new class: .book
+  const textbookContainer = document.querySelector(".book");
 
   // If the container is not present on the page, stop execution
   if (!textbookContainer) {
@@ -89,15 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // --- EXPANDABLE (EDITORIAL/ATTRIBUTIONS) FUNCTIONALITY ---
-  // Note: Since this functionality relies on global calls from the HTML (e.g., onclick="toggleCustomExpandable('id', 'id')"),
-  // the global functions (slideToggleContent, toggleCustomExpandable) must remain available in the window scope.
-  // We will ensure the functions are defined outside the DOMContentLoaded listener and simply use the scoped logic inside them.
-
-  // The functions are already using document.getElementById, which works globally.
-  // The assumption is the IDs for editorial/attributions content are unique and reside within your main content structure.
-  // Since the structure of these functions is clean, they do not need to be heavily modified, only ensured they are globally accessible.
 });
 
 /**
