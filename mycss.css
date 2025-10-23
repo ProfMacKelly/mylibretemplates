@@ -368,318 +368,6 @@ footer {
   font-size: 20px;
 }
 
-/* Old Boxes */
-.boxes-container {
-  display: flex;
-  gap: 20px;
-  display: block;
-}
-
-.greenbox-scale {
-  border-left: 5px solid #2c5e36;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #ebf5eb;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.greenbox-scale-header {
-  display: inline-block;
-  background-color: #2c5e36;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.greenbox-scale-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f24e";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.greenbox-scale-content {
-  background-color: #ebf5eb;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-
-.videobox {
-  border-left: 5px solid #880101;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #fff8f8;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.videobox-header {
-  display: inline-block;
-  background-color: #880101;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.videobox-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f144";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.videobox-content {
-  background-color: #fff8f8;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-
-.listenbox {
-  border-left: 5px solid #880101;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #fff8f8;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.listenbox-header {
-  display: inline-block;
-  background-color: #880101;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.listenbox-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f025";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.listenbox-content {
-  background-color: #fff8f8;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-
-.tanbox {
-  border-left: 5px solid #3f3208;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #f5f4ddfa;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.tanbox-header {
-  display: inline-block;
-  background-color: #3f3208;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.tanbox-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f0e3";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.tanbox-content {
-  background-color: #f5f4ddfa;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-.read {
-  border-left: 5px solid #4c0f0f;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #f9f5f5;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.read-header {
-  display: inline-block;
-  background-color: #4c0f0f;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.read-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f518";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.read-content {
-  background-color: #f9f5f5;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-.notebox {
-  border-left: 5px solid #f8da46;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #fdf8dd;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.notebox-header {
-  display: inline-block;
-  background-color: #f8da46;
-  color: black;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.notebox-header::before {
-  font-family: "Font Awesome 5 Pro";
-  content: "\f044";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.notebox-content {
-  background-color: #fdf8dd;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-
-.objectivesbox-content ol {
-  padding-left: 1.5em; /* adds space for numbers */
-  margin: 0; /* optional — ensures consistent spacing */
-}
-
-.objectivesbox {
-  border-left: 5px solid #127bc4;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #f1f9fe;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-
-.objectivesbox-header {
-  display: inline-block;
-  background-color: #127bc4;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.objectivesbox-header::before {
-  font-family: "Font Awesome 5 Pro";
-  content: "\f648";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.objectivesbox-content {
-  background-color: #f1f9fe;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 10px;
-}
-.keybox {
-  border-left: 5px solid #3f3208;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 5px;
-  background-color: #f5f4ddfa;
-  margin-bottom: 20px; /* Two line spaces (20px each) */
-}
-.keybox-header {
-  display: inline-block;
-  background-color: #3f3208;
-  color: white;
-  padding: 5px 10px;
-  font-family: Tahoma;
-  font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 0px 0px 0px 0px;
-}
-
-.keybox-header::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f084";
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.keybox-content {
-  background-color: #f5f4ddfa;
-  font-family: Tahoma;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 10px;
-}
-
 /* Tooltips */
 .tooltip {
   position: relative;
@@ -753,11 +441,11 @@ footer {
 .collapsible {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between icon and text */
   padding: 0.9em 1em;
   background-color: #edffeb;
   color: #002c07;
-  border: none;
+  border: 1px solid #36843a; /* border visible even when closed */
+  border-radius: 6px;  
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -765,36 +453,57 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+/* Add space between Material icon and heading text */
+.collapsible .material-icons {
+  margin-right: 8px; /* adjust as needed */
+  vertical-align: middle;
+}
+
 .collapsible:hover {
   background-color: #d9ffdb;
 }
+
 .active,
 .collapsible:hover {
   background-color: #d9ffdb;
 }
+
 .collapsible:before {
   content: "\2b"; /* FontAwesome 7 Free icon */
   font-family: "Font Awesome 7 Free";
   font-weight: 600;
   font-size: 0.6em;
-  float: left;
-  margin-left: 5px;
+  margin-right: 12px;   /* <-- space between + and Material icon */
+  margin-left: 4px;    /* optional small indent */
 }
+
 .active:before {
   content: "\f068"; /* FontAwesome 7 Free icon */
   font-family: "Font Awesome 7 Free";
   font-weight: 900;
-  float: left;
-  margin-left: 5px;
+  margin-right: 12px;   /* keep same spacing for consistency */
+  margin-left: 4px;
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
   background-color: #f8fff8;
+  border: 1px solid transparent; /* prepare for animated border expansion */
+  border-top: none; /* avoids double border between header and content */
+  border-radius: 0 0 6px 6px;
+  transition: max-height 0.4s ease-out, border-color 0.3s ease;
   padding: 0 10px;
 }
+
+
+/* Expanded state (when JS adds 'active' class) */
+.active + .collapsible-content {
+  border-color: #36843a; /* match header border */
+  max-height: 500px; /* large enough to fit your content */
+  padding: 10px; /* visible inner spacing when open */
+}
+
 
 /* Elissions/Ellipsis */
 .elide-ellipsis,
