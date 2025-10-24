@@ -237,7 +237,7 @@ em {
   color: #202e2a;
 }
 
-/* Listen admon - Material theme uses deep orange */
+/* Listen admon */
 .admon-listen {
   border-color: #ad5fcf;
 }
@@ -245,6 +245,60 @@ em {
 .admon-listen .admon-header {
   background-color: #efcbff;
   color: black;
+}
+
+a {
+  color: #4a6ee0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2a4ec4;
+  text-decoration: underline;
+}
+
+em {
+  font-style: italic;
+  color: #555;
+}      
+
+.admon-listen .admon-body {
+  text-align: center;
+}
+
+.admon-listen .listen-container {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto; /* Center the listen container */
+}
+
+.admon-listen .admon-body p:first-of-type {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1em; /* Keep some bottom spacing before the listen item*/
+}
+
+/* Ensure the listen container doesn't add extra top spacing */
+.admon-listen .listen-container {
+  margin-top: 0;
+}
+
+.admon-listen .listen-container iframe {
+  width: 100%;
+  height: 175px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admon-listen .admon-content {
+  padding: 20px;
+  text-align: center; /* Only center content in listen admonitions */
+}
+
+.mt-align-center {
+  text-align: center;
 }
 
 /* Objectives admon */
@@ -385,6 +439,10 @@ code {
 
   .admon-video .video-container iframe {
     height: 200px; /* Adjust video height for mobile */
+  }
+
+  .admon-listen .listen-container iframe {
+    height: 200px; /* Adjust listen height for mobile */
   }
 }
 
