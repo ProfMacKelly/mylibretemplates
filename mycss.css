@@ -266,7 +266,7 @@ em {
 
 /* Key Takeaways admon - Material theme uses deep orange */
 .admon-keys {
-  border-color: #3f3208;
+  border-color: #ff6a33;
 }
 
 .admon-keys .admon-icon::before {
@@ -274,14 +274,15 @@ em {
   content: "\f084";
   font-weight: 400;
   font-size: 1.2em;
-  color: white;
+  color: ff6a33;
 }
 
 .admon-keys .admon-header {
-  background-color: #3d2b1f;
+  background-color: #ffe6cc;
+  color: #920101;
 }
 
-/* Key Takeaways admon - Material theme uses deep orange */
+/* Read admon - Material theme uses deep orange */
 .admon-read {
   border-color: #bda89b;
 }
