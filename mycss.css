@@ -1,5 +1,5 @@
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f5f7fa;
   padding: 20px;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 .notes-list li::marker {
-  content: "[" counter(list-item) "] ";
+  content: '[' counter(list-item) '] ';
   font-size: 12px;
 }
 
@@ -143,8 +143,8 @@ em {
 }
 
 .admon-note .admon-icon::before {
-  font-family: "Font Awesome 5 Pro";
-  content: "\f044";
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f044';
   font-size: 1.1em;
   color: black;
   font-weight: 900;
@@ -197,8 +197,8 @@ em {
 }
 
 .admon-case .admon-icon::before {
-  font-family: "Font Awesome 7 Free";
-  content: "\f0e3";
+  font-family: 'Font Awesome 7 Free';
+  content: '\f0e3';
   font-size: 1.2em;
   font-weight: 900;
   color: black;
@@ -249,8 +249,8 @@ em {
 
 /* Objectives admon */
 .admon-objectives .admon-icon::before {
-  font-family: "Font Awesome 5 Pro";
-  content: "\f648";
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f648';
   font-size: 1.2em;
   font-weight: 700;
   color: white;
@@ -270,8 +270,8 @@ em {
 }
 
 .admon-keys .admon-icon::before {
-  font-family: "Font Awesome 5 Pro";
-  content: "\f084";
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f084';
   font-weight: 400;
   font-size: 1.2em;
   color: ff6a33;
@@ -298,9 +298,9 @@ em {
 }
 
 .admon-example .admon-icon::before {
-  font-family: "Font Awesome 7 Free";
+  font-family: 'Font Awesome 7 Free';
   font-weight: 900;
-  content: "\e53d";
+  content: '\e53d';
   color: #002c42;
   font-size: 1.2em;
 }
@@ -341,7 +341,7 @@ pre {
   border-radius: 6px;
   overflow-x: auto;
   margin: 15px 0;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-size: 14px;
   border-left: 4px solid #3f51b5;
 }
@@ -350,7 +350,7 @@ code {
   background-color: #f8f9fa;
   padding: 3px 6px;
   border-radius: 3px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   color: #d63384;
 }
 
@@ -472,7 +472,7 @@ footer {
 /* Improved positioning to avoid clipping */
 .tooltip .tooltiptext::before {
   /* Add a small triangle "arrow" */
-  content: "";
+  content: '';
   position: absolute;
   bottom: -8px; /* Adjust as needed */
   left: 50%;
@@ -530,8 +530,8 @@ footer {
 }
 
 .collapsible:before {
-  content: "\2b"; /* FontAwesome 7 Free icon */
-  font-family: "Font Awesome 7 Free";
+  content: '\2b'; /* FontAwesome 7 Free icon */
+  font-family: 'Font Awesome 7 Free';
   font-weight: 600;
   font-size: 0.6em;
   margin-right: 12px; /* <-- space between + and Material icon */
@@ -539,8 +539,8 @@ footer {
 }
 
 .active:before {
-  content: "\f068"; /* FontAwesome 7 Free icon */
-  font-family: "Font Awesome 7 Free";
+  content: '\f068'; /* FontAwesome 7 Free icon */
+  font-family: 'Font Awesome 7 Free';
   font-weight: 900;
   margin-right: 12px; /* keep same spacing for consistency */
   margin-left: 4px;
