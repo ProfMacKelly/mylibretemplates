@@ -793,9 +793,5 @@ footer {
   padding-bottom: 0 !important;
 }
 
-/* 4. Arrow Rotation (AFFECTS BOTH) */
-#editorial-header.is-open #editorial-arrow,
-#attributions-header.is-open #attributions-arrow {
-  transform: rotate(90deg) !important;
-}
+
 /* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */
