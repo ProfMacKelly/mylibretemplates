@@ -266,7 +266,7 @@ em {
 
 /* Key Takeaways admon - Material theme uses deep orange */
 .admon-keys {
-  border-color: #ff6a33;
+  border-color: #f59e0b;
 }
 
 .admon-keys .admon-icon::before {
@@ -278,8 +278,8 @@ em {
 }
 
 .admon-keys .admon-header {
-  background-color: #ffe6cc;
-  color: #920101;
+  background-color: #fff4e5;
+  color: #5a3100;
 }
 
 /* Read admon - Material theme uses deep orange */
@@ -498,7 +498,7 @@ footer {
   }
 }
 
-/* Collapsible */
+/* Default Collapsible */
 .collapsible {
   display: flex;
   align-items: center;
@@ -562,6 +562,45 @@ footer {
   border-color: #36843a; /* match header border */
   max-height: 500px; /* large enough to fit your content */
   padding: 10px; /* visible inner spacing when open */
+}
+
+/* FOR OTHER COLLAPSIBLE VARIANTS*/
+/* Example: Read the Case variant */
+.collapsible-read {
+  background-color: #f6f3f1;
+  color: #130400;
+  border-color: #bda89b;
+}
+.collapsible-read:hover,
+.collapsible-read.active {
+  background-color: #f0edec;
+}
+.collapsible-read:before,
+.collapsible-read.active:before {
+  color: #130400;
+}
+.collapsible-read.active + .collapsible-content {
+  border-color: #bda89b;
+  background-color: white; /* warm pale orange */
+}
+
+/* Example Orange (warning) */
+.collapsible-orange {
+  background-color: #fff4e5;
+  color: #5a3100;
+  border-color: #f59e0b;
+}
+.collapsible-orange:hover,
+.collapsible-orange.active {
+  background-color: #ffe9cc;
+}
+.collapsible-orange:before,
+.collapsible-orange.active:before {
+  color: #5a3100;
+}
+.collapsible-orange.active + .collapsible-content {
+  border-color: #f59e0b;
+  background-color: #fff7eb; /* warm pale orange */
 }
 
 /* Elissions/Ellipsis */
