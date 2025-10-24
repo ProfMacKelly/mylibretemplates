@@ -607,6 +607,10 @@ footer {
   background-color: #fff7eb; /* warm pale orange */
 }
 
+.collapsible-orange + .collapsible-content {
+  background-color: #fff7eb;
+}
+
 /* Elissions/Ellipsis */
 .elide-ellipsis,
 .hide-btn {
