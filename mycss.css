@@ -584,6 +584,10 @@ footer {
   background-color: white; /* warm pale orange */
 }
 
+.collapsible-read + .collapsible-content {
+  background-color: white;
+}
+
 /* Example Orange (warning) */
 .collapsible-orange {
   background-color: #fff4e5;
