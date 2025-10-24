@@ -83,6 +83,17 @@ body {
   margin: 0 auto; /* Center the video container */
 }
 
+.admon-video .admon-body p:first-of-type {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1em; /* Keep some bottom spacing before the video */
+}
+
+/* Ensure the video container doesn't add extra top spacing */
+.admon-video .video-container {
+  margin-top: 0;
+}
+
 .admon-video .video-container iframe {
   width: 100%;
   height: 371px;
