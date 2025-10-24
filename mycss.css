@@ -34,8 +34,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid;
-  max-width: 800px; /* Added to center the admon */
-  margin: 0 auto; /* Added to center the admon */
 }
 
 .admon-header {
@@ -61,7 +59,6 @@ body {
   padding: 20px;
   font-size: 16px;
   line-height: 1.6;
-  text-align: center; /* Added to center content */
 }
 
 .admon-body ol {
@@ -74,6 +71,34 @@ body {
   margin: 0; /* optional: keeps spacing tidy */
 }
 
+/* Video admonition centering - ONLY affects video admonitions */
+.admon-video .admon-body {
+  text-align: center;
+}
+
+.admon-video .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto; /* Center the video container */
+}
+
+.admon-video .video-container iframe {
+  width: 100%;
+  height: 371px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admon-video .admon-content {
+  padding: 20px;
+  text-align: center; /* Only center content in video admonitions */
+}
+
+.mt-align-center {
+  text-align: center;
+}
+
 /* Video-specific styling */
 .admon-video {
   border-color: #dd4f40;
@@ -82,30 +107,6 @@ body {
 .admon-video .admon-header {
   background-color: #be0000;
   color: white;
-}
-
-/* New classes for centering */
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 660px;
-  margin: 0 auto; /* Center the video container */
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 371px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.admon-content {
-  padding: 20px;
-  text-align: center; /* Center the content below the video */
-}
-
-.mt-align-center {
-  text-align: center;
 }
 
 a {
@@ -370,7 +371,7 @@ code {
     padding: 16px;
   }
 
-  .video-container iframe {
+  .admon-video .video-container iframe {
     height: 200px; /* Adjust video height for mobile */
   }
 }
