@@ -111,7 +111,7 @@ body {
 
 .admon-video .admon-content {
   padding: 20px;
-  margin-top: -10px;
+  margin-top: -20px;
   text-align: center; /* Only center content in video admonitions */
 }
 
