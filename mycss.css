@@ -111,6 +111,44 @@ body {
   text-align: center;
 }
 
+/* ========== FORCE tight-caption spacing ========== */
+/* Apply only when you add `tight-caption` to the outer admon */
+.admon.admon-video.tight-caption .video-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.admon.admon-video.tight-caption .admon-body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.admon.admon-video.tight-caption .admon-content {
+  margin-top: -12px !important;   /* pull the caption up — adjust (-6 to -18px) */
+  padding-top: 6px !important;    /* keep a little internal breathing room */
+}
+
+/* Remove top margins on the first child inside the caption area */
+.admon.admon-video.tight-caption .admon-content > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Tighten any .bc-figure or <em> top margins inside the caption */
+.admon.admon-video.tight-caption .admon-content .bc-figure,
+.admon.admon-video.tight-caption .admon-content em,
+.admon.admon-video.tight-caption .admon-content p {
+  margin-top: 0 !important;
+  margin-bottom: 0.35em !important;
+  line-height: 1.25;
+  font-size: 14px;
+}
+
+/* Also ensure overall admon-body/admon-content don't have interfering padding */
+.admon.admon-video.tight-caption {
+  padding-bottom: 0 !important;
+}
+
 /* Video-specific styling */
 .admon-video {
   border-color: #dd4f40;
