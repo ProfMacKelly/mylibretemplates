@@ -144,7 +144,7 @@ body {
 /* Optional: slight negative margin to tuck caption under rounded iframe shadow
    (use only if you want the caption to visually overlap the iframe shadow) */
 .admon-video.tight-caption .admon-content {
-  margin-top: -6px;              /* subtle tuck; remove if it feels wrong */
+  margin-top: -15px;              /* subtle tuck; remove if it feels wrong */
 }
 
 .mt-align-center {
