@@ -151,12 +151,43 @@ body {
   text-align: center;
 }
 
-/* DEBUG: outlines to visualize spacing — remove after testing */
-.admon.admon-video { outline: 3px solid rgba(255,0,0,0.15); }
-.admon.admon-video .admon-body { outline: 3px solid rgba(0,128,255,0.12); }
-.admon.admon-video .video-container { outline: 3px solid rgba(0,200,100,0.12); }
-.admon.admon-video .admon-content { outline: 3px solid rgba(255,200,0,0.12); }
-.admon.admon-video .admon-content > * { outline: 1px dashed rgba(0,0,0,0.08); }
+/* ========== FORCE tight-caption spacing ========== */
+/* Apply only when you add `tight-caption` to the outer admon */
+.admon.admon-video.tight-caption .video-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.admon.admon-video.tight-caption .admon-body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.admon.admon-video.tight-caption .admon-content {
+  margin-top: -12px !important;   /* pull the caption up — adjust (-6 to -18px) */
+  padding-top: 6px !important;    /* keep a little internal breathing room */
+}
+
+/* Remove top margins on the first child inside the caption area */
+.admon.admon-video.tight-caption .admon-content > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Tighten any .bc-figure or <em> top margins inside the caption */
+.admon.admon-video.tight-caption .admon-content .bc-figure,
+.admon.admon-video.tight-caption .admon-content em,
+.admon.admon-video.tight-caption .admon-content p {
+  margin-top: 0 !important;
+  margin-bottom: 0.35em !important;
+  line-height: 1.25;
+  font-size: 14px;
+}
+
+/* Also ensure overall admon-body/admon-content don't have interfering padding */
+.admon.admon-video.tight-caption {
+  padding-bottom: 0 !important;
+}
 
 /* Video-specific styling */
 .admon-video {
