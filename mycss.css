@@ -572,7 +572,19 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+/* Align list markers with text inside collapsibles */
+.collapsible-content ol,
+.collapsible-content ul {
+  margin-left: -1em;     /* adjust to match your non-list paragraph indent */
+  padding-left: -1em;    /* ensures numbers/bullets sit inside border area */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-position: outside; /* keeps bullets/numbers outside text block */
+}
 
+.collapsible-content li {
+  margin-bottom: 0;   
+}
 
 /* Add space between Material icon and heading text */
 .collapsible .material-icons {
