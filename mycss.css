@@ -52,13 +52,13 @@ body {
 }
 
 .admon-title {
-  font-size: 16px;
+  font-size: mt-font-size-18;
   letter-spacing: 0.5px;
 }
 
 .admon-body {
   padding: 20px;
-  font-size: 16px;
+  font-size: mt-font-size-16;
   line-height: 1.6;
 }
 
