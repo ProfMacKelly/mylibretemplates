@@ -151,6 +151,13 @@ body {
   text-align: center;
 }
 
+/* DEBUG: outlines to visualize spacing — remove after testing */
+.admon.admon-video { outline: 3px solid rgba(255,0,0,0.15); }
+.admon.admon-video .admon-body { outline: 3px solid rgba(0,128,255,0.12); }
+.admon.admon-video .video-container { outline: 3px solid rgba(0,200,100,0.12); }
+.admon.admon-video .admon-content { outline: 3px solid rgba(255,200,0,0.12); }
+.admon.admon-video .admon-content > * { outline: 1px dashed rgba(0,0,0,0.08); }
+
 /* Video-specific styling */
 .admon-video {
   border-color: #dd4f40;
