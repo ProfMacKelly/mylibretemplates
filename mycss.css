@@ -572,6 +572,8 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+
+
 /* Add space between Material icon and heading text */
 .collapsible .material-icons {
   margin-right: 8px; /* adjust as needed */
@@ -619,7 +621,7 @@ footer {
 .active + .collapsible-content {
   border-color: #36843a; /* match header border */
   max-height: 500px; /* large enough to fit your content */
-  padding: 10px; /* visible inner spacing when open */
+  padding: 20px; /* visible inner spacing when open */
 }
 
 /* FOR OTHER COLLAPSIBLE VARIANTS*/
