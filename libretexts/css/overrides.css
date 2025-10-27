@@ -1,0 +1,29 @@
+/* --- LibreTexts-specific video spacing fix --- */
+
+/* Remove unexpected vertical gaps inserted by LibreTexts globals */
+.admon-video .admon-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Tighten the area directly below the iframe */
+.admon-video .video-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Neutralize Mindtouch figure and emphasis defaults */
+.admon-video .admon-content .bc-figure,
+.admon-video .admon-content .figure,
+.admon-video .admon-content em {
+  margin-top: 0 !important;
+  margin-bottom: 0.2em !important;
+  line-height: 1.25 !important;
+}
+
+/* Sometimes Mindtouch wraps <em> in <p>, so flatten that too */
+.admon-video .admon-content p {
+  margin-top: 0 !important;
+  margin-bottom: 0.2em !important;
+  line-height: 1.25 !important;
+}
