@@ -1,3 +1,6 @@
+/* =============================================================================
+   BASE STYLES
+   ========================================================================== */
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -5,7 +8,9 @@ body {
   padding: 20px;
 }
 
-/* Footnotes */
+/* =============================================================================
+   FOOTNOTES
+   ========================================================================== */
 .notes-label {
   margin-bottom: 0;
 }
@@ -20,7 +25,9 @@ body {
   font-size: 12px;
 }
 
-/* Admonitions/New Boxes */
+/* =============================================================================
+   GENERAL ADMONITION STYLES
+   ========================================================================== */
 .container {
   max-width: full;
   margin: 0 auto;
@@ -66,7 +73,9 @@ body {
   margin: 0;
 }
 
-/* Video and Listen admonitions - shared rules */
+/* =============================================================================
+   VIDEO & LISTEN ADMONITIONS
+   ========================================================================== */
 .admon-video .video-container,
 .admon-listen .listen-container {
   position: relative;
@@ -134,11 +143,10 @@ body {
   margin-top: -6px;
 }
 
-/* Individual video/listen theme colors */
+/* Individual theme colors */
 .admon-video {
   border-color: #dd4f40;
 }
-
 .admon-video .admon-header {
   background-color: #be0000;
   color: white;
@@ -147,7 +155,6 @@ body {
 .admon-listen {
   border-color: #ad5fcf;
 }
-
 .admon-listen .admon-header {
   background-color: #efcbff;
   color: black;
@@ -157,7 +164,9 @@ body {
   text-align: center;
 }
 
-/* Links & emphasis */
+/* =============================================================================
+   LINKS & EMPHASIS
+   ========================================================================== */
 a {
   color: #4a6ee0;
   text-decoration: none;
@@ -174,11 +183,12 @@ em {
   color: #555;
 }
 
-/* Admonition color variants */
+/* =============================================================================
+   ADMONITION VARIANTS (TIP, NOTE, INFO, ETC.)
+   ========================================================================== */
 .admon-note {
   border-color: #decc8b;
 }
-
 .admon-note .admon-icon::before {
   font-family: 'Font Awesome 5 Pro';
   content: '\f044';
@@ -186,7 +196,6 @@ em {
   color: black;
   font-weight: 900;
 }
-
 .admon-note .admon-header {
   background-color: #ffeba1;
   color: black;
@@ -195,7 +204,6 @@ em {
 .admon-tip {
   border-color: #00bcd4;
 }
-
 .admon-tip .admon-header {
   background-color: #00bcd4;
 }
@@ -203,7 +211,6 @@ em {
 .admon-info {
   border-color: #2196f3;
 }
-
 .admon-info .admon-header {
   background-color: #2196f3;
 }
@@ -211,7 +218,6 @@ em {
 .admon-success {
   border-color: #4caf50;
 }
-
 .admon-success .admon-header {
   background-color: #4caf50;
 }
@@ -219,7 +225,6 @@ em {
 .admon-warning {
   border-color: #ff9800;
 }
-
 .admon-warning .admon-header {
   background-color: #ff9800;
 }
@@ -227,7 +232,6 @@ em {
 .admon-case {
   border-color: #aaa691;
 }
-
 .admon-case .admon-icon::before {
   font-family: 'Font Awesome 7 Free';
   content: '\f0e3';
@@ -235,7 +239,6 @@ em {
   font-weight: 900;
   color: black;
 }
-
 .admon-case .admon-header {
   background-color: #e5e0c4;
   color: black;
@@ -244,7 +247,6 @@ em {
 .admon-important {
   border-color: #e91e63;
 }
-
 .admon-important .admon-header {
   background-color: #e91e63;
 }
@@ -252,7 +254,6 @@ em {
 .admon-caution {
   border-color: #ff5722;
 }
-
 .admon-caution .admon-header {
   background-color: #ff5722;
 }
@@ -260,20 +261,20 @@ em {
 .admon-sidebar {
   border-color: #9cbfb5;
 }
-
 .admon-sidebar .admon-header {
   background-color: #e6efec;
   color: #202e2a;
 }
 
+/* =============================================================================
+   SPECIALIZED ADMONITIONS
+   ========================================================================== */
 .admon-objectives {
   border-color: #68a3d8;
 }
-
 .admon-objectives .admon-header {
   background-color: #127bc4;
 }
-
 .admon-objectives .admon-icon::before {
   font-family: 'Font Awesome 5 Pro';
   content: '\f648';
@@ -285,12 +286,10 @@ em {
 .admon-keys {
   border-color: #f59e0b;
 }
-
 .admon-keys .admon-header {
   background-color: #fff4e5;
   color: #5a3100;
 }
-
 .admon-keys .admon-icon::before {
   font-family: 'Font Awesome 5 Pro';
   content: '\f084';
@@ -302,7 +301,6 @@ em {
 .admon-read {
   border-color: #bda89b;
 }
-
 .admon-read .admon-header {
   background-color: #f6f3f1;
   color: #130400;
@@ -311,7 +309,6 @@ em {
 .admon-example {
   border-color: #afd9f0;
 }
-
 .admon-example .admon-icon::before {
   font-family: 'Font Awesome 7 Free';
   font-weight: 900;
@@ -319,7 +316,6 @@ em {
   color: #002c42;
   font-size: 1.2em;
 }
-
 .admon-example .admon-header {
   background-color: #e3f4ff;
   color: black;
@@ -328,14 +324,16 @@ em {
 .admon-exercise {
   border-color: #a5b9da;
 }
-
 .admon-exercise .admon-header {
   background-color: #f5f8ff;
   color: #143160;
 }
 
-/* Usage Section */
-.usage-section {
+/* =============================================================================
+   SUPPORTING SECTIONS (Usage, Icon Reference)
+   ========================================================================== */
+.usage-section,
+.icon-reference {
   background-color: white;
   padding: 25px;
   border-radius: 10px;
@@ -343,7 +341,8 @@ em {
   margin-top: 30px;
 }
 
-.usage-section h2 {
+.usage-section h2,
+.icon-reference h2 {
   color: #3f51b5;
   margin-bottom: 20px;
   font-weight: 500;
@@ -351,6 +350,9 @@ em {
   border-bottom: 1px solid #eee;
 }
 
+/* =============================================================================
+   CODE BLOCKS
+   ========================================================================== */
 pre {
   background-color: #f8f9fa;
   padding: 18px;
@@ -370,22 +372,13 @@ code {
   color: #d63384;
 }
 
-.code-example {
-  margin: 25px 0;
-}
-
-.code-example h3 {
-  color: #3f51b5;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-/* Responsive Adjustments */
+/* =============================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
 @media (max-width: 768px) {
   .admons-grid {
     grid-template-columns: 1fr;
   }
-
   body {
     padding: 15px;
   }
@@ -395,55 +388,18 @@ code {
   .admon-header {
     padding: 12px 14px;
   }
-
   .admon-body {
     padding: 16px;
   }
-
   .admon-video .video-container iframe,
   .admon-listen .listen-container iframe {
     height: 200px;
   }
 }
 
-/* Icon Reference */
-.icon-reference {
-  background-color: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-.icon-reference h2 {
-  color: #3f51b5;
-  margin-bottom: 20px;
-  font-weight: 500;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.icon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.icon-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #f8f9fa;
-}
-
-.icon-item .material-icons {
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-/* Tooltips */
+/* =============================================================================
+   TOOLTIP STYLING
+   ========================================================================== */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -500,13 +456,14 @@ code {
     max-width: 90%;
     text-align: center;
   }
-
   .tooltip .tooltiptext::before {
     left: 10%;
   }
 }
 
-/* Collapsibles */
+/* =============================================================================
+   COLLAPSIBLES
+   ========================================================================== */
 .collapsible {
   display: flex;
   align-items: center;
@@ -522,27 +479,8 @@ code {
   transition: background-color 0.3s ease;
 }
 
-.collapsible-content ol,
-.collapsible-content ul {
-  margin-left: 0.5em;
-  padding-left: 0.5em;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  list-style-position: outside;
-}
-
-.collapsible-content li {
-  margin-bottom: 0;
-}
-
-.collapsible .material-icons {
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
 .collapsible:hover,
-.active,
-.collapsible:hover {
+.active {
   background-color: #d9ffdb;
 }
 
@@ -563,6 +501,11 @@ code {
   margin-left: 4px;
 }
 
+.collapsible .material-icons {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -574,6 +517,15 @@ code {
   padding: 0 10px;
 }
 
+.collapsible-content ol,
+.collapsible-content ul {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-position: outside;
+}
+
 .active + .collapsible-content {
   border-color: #36843a;
   max-height: 500px;
@@ -581,28 +533,24 @@ code {
   font-size: 18px;
 }
 
-/* Collapsible variants */
+/* Collapsible Variants */
 .collapsible-read {
   background-color: #f6f3f1;
   color: #130400;
   border-color: #bda89b;
 }
-
 .collapsible-read:hover,
 .collapsible-read.active {
   background-color: #f0edec;
 }
-
 .collapsible-read:before,
 .collapsible-read.active:before {
   color: #130400;
 }
-
 .collapsible-read.active + .collapsible-content {
   border-color: #bda89b;
   background-color: white;
 }
-
 .collapsible-read + .collapsible-content {
   background-color: white;
 }
@@ -612,27 +560,25 @@ code {
   color: #5a3100;
   border-color: #f59e0b;
 }
-
 .collapsible-orange:hover,
 .collapsible-orange.active {
   background-color: #ffe9cc;
 }
-
 .collapsible-orange:before,
 .collapsible-orange.active:before {
   color: #5a3100;
 }
-
 .collapsible-orange.active + .collapsible-content {
   border-color: #f59e0b;
   background-color: #fff7eb;
 }
-
 .collapsible-orange + .collapsible-content {
   background-color: #fff7eb;
 }
 
-/* Elisions */
+/* =============================================================================
+   ELISION / HIDE BUTTONS
+   ========================================================================== */
 .elide-ellipsis,
 .hide-btn {
   display: inline;
@@ -665,7 +611,9 @@ code {
   font-weight: bold;
 }
 
-/* --- START: Line-Height Fix for Custom Boxes (LibreTexts spacing) --- */
+/* =============================================================================
+   LINE-HEIGHT FIX (LibreTexts Compatibility)
+   ========================================================================== */
 .greenbox-scale,
 .greenbox-scale-content,
 .objectivesbox,
@@ -709,7 +657,9 @@ code {
   line-height: 1.5 !important;
 }
 
-/* --- Expandables for Editorial Notes, Attributions, and Licensing --- */
+/* =============================================================================
+   EDITORIAL / ATTRIBUTION EXPANDABLES
+   ========================================================================== */
 #editorial-header,
 #attributions-header {
   font-family: Inter, sans-serif !important;
