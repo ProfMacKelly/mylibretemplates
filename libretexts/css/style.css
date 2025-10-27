@@ -60,90 +60,81 @@ body {
   line-height: 1.6;
 }
 
-.admon-body ol {
-  padding-left: 1em; /* gives space for the numbers */
-  margin: 0; /* optional: keeps spacing tidy */
-}
-
+.admon-body ol,
 .admon-body ul {
-  padding-left: 1em; /* gives space for the numbers */
-  margin: 0; /* optional: keeps spacing tidy */
+  padding-left: 1em;
+  margin: 0;
 }
 
-/* Video admonition centering - ONLY affects video admonitions */
-.admon-video .admon-body {
-  text-align: center;
-}
-
-.admon-video .video-container {
+/* Video and Listen admonitions - shared rules */
+.admon-video .video-container,
+.admon-listen .listen-container {
   position: relative;
   width: 100%;
   max-width: 660px;
-  margin: 0 auto; /* Center the video container */
+  margin: 0 auto;
 }
 
-.admon-video .admon-body p:first-of-type {
+.admon-video .admon-body,
+.admon-listen .admon-body {
+  text-align: center;
+}
+
+.admon-video .admon-body p:first-of-type,
+.admon-listen .admon-body p:first-of-type {
   text-align: left;
   font-size: 18px;
   margin-top: 0;
-  margin-bottom: 1em; /* Keep some bottom spacing before the video */
+  margin-bottom: 1em;
 }
 
-/* Ensure the video container doesn't add extra top spacing */
-.admon-video .video-container {
-  margin-top: 0;
-}
-
-.admon-video .video-container iframe {
+.admon-video .video-container iframe,
+.admon-listen .listen-container iframe {
   width: 100%;
-  height: 371px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.admon-video .admon-content {
+.admon-video .video-container iframe {
+  height: 371px;
+}
+
+.admon-listen .listen-container iframe {
+  height: 175px;
+}
+
+.admon-video .admon-content,
+.admon-listen .admon-content {
   padding: 20px;
   margin-top: -10px;
-  text-align: center; /* Only center content in video admonitions */
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
-/* tighten caption/attribution under video admonitions */
-.admon-video .video-container {
-  margin-bottom: 0; /* no extra gap from the video wrapper itself */
-}
-
-/* reduce the top padding inside the caption area (was 20px) */
-.admon-video .admon-content {
-  padding-top: 0; /* adjust (4–12px) until it looks right */
-  padding-bottom: 20px; /* keep bottom padding if you want space below */
-}
-
-/* remove top margin from the first element inside the caption area */
-.admon-video .admon-content > *:first-child {
+.admon-video .admon-content > *:first-child,
+.admon-listen .admon-content > *:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* if your .bc-figure or <em> adds margins, tighten them specifically */
 .admon-video .admon-content .bc-figure,
-.admon-video .admon-content em {
+.admon-listen .admon-content .bc-figure,
+.admon-video .admon-content em,
+.admon-listen .admon-content em {
   margin-top: 0;
-  margin-bottom: 0.35em; /* keep a small readable gap after each line */
+  margin-bottom: 0.35em;
   line-height: 1.25;
-  font-size: 14px; /* keep your caption size consistent */
+  font-size: 14px;
 }
 
-/* Optional: slight negative margin to tuck caption under rounded iframe shadow
-   (use only if you want the caption to visually overlap the iframe shadow) */
-.admon-video.tight-caption .admon-content {
-  margin-top: -6px; /* subtle tuck; remove if it feels wrong */
+/* Optional subtle tuck */
+.admon-video.tight-caption .admon-content,
+.admon-listen.tight-caption .admon-content {
+  margin-top: -6px;
 }
 
-.mt-align-center {
-  text-align: center;
-}
-
-/* Video-specific styling */
+/* Individual video/listen theme colors */
 .admon-video {
   border-color: #dd4f40;
 }
@@ -153,6 +144,20 @@ body {
   color: white;
 }
 
+.admon-listen {
+  border-color: #ad5fcf;
+}
+
+.admon-listen .admon-header {
+  background-color: #efcbff;
+  color: black;
+}
+
+.mt-align-center {
+  text-align: center;
+}
+
+/* Links & emphasis */
 a {
   color: #4a6ee0;
   text-decoration: none;
@@ -169,8 +174,7 @@ em {
   color: #555;
 }
 
-/* Rest of your existing CSS */
-/* Note admon */
+/* Admonition color variants */
 .admon-note {
   border-color: #decc8b;
 }
@@ -188,7 +192,6 @@ em {
   color: black;
 }
 
-/* Tip admon - Material theme uses teal */
 .admon-tip {
   border-color: #00bcd4;
 }
@@ -197,7 +200,6 @@ em {
   background-color: #00bcd4;
 }
 
-/* Info admon - Material theme uses blue */
 .admon-info {
   border-color: #2196f3;
 }
@@ -206,7 +208,6 @@ em {
   background-color: #2196f3;
 }
 
-/* Success admon - Material theme uses green */
 .admon-success {
   border-color: #4caf50;
 }
@@ -215,7 +216,6 @@ em {
   background-color: #4caf50;
 }
 
-/* Warning admon - Material theme uses orange */
 .admon-warning {
   border-color: #ff9800;
 }
@@ -224,7 +224,6 @@ em {
   background-color: #ff9800;
 }
 
-/* Case in Point admon - Material theme uses red */
 .admon-case {
   border-color: #aaa691;
 }
@@ -242,7 +241,6 @@ em {
   color: black;
 }
 
-/* Important admon - Material theme uses pink */
 .admon-important {
   border-color: #e91e63;
 }
@@ -251,7 +249,6 @@ em {
   background-color: #e91e63;
 }
 
-/* Caution admon - Material theme uses deep orange */
 .admon-caution {
   border-color: #ff5722;
 }
@@ -260,7 +257,6 @@ em {
   background-color: #ff5722;
 }
 
-/* Sidebar admon - Material theme uses deep orange */
 .admon-sidebar {
   border-color: #9cbfb5;
 }
@@ -268,79 +264,6 @@ em {
 .admon-sidebar .admon-header {
   background-color: #e6efec;
   color: #202e2a;
-}
-
-/* Listen admon */
-.admon-listen {
-  border-color: #ad5fcf;
-}
-
-.admon-listen .admon-header {
-  background-color: #efcbff;
-  color: black;
-}
-
-a {
-  color: #4a6ee0;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #2a4ec4;
-  text-decoration: underline;
-}
-
-em {
-  font-style: italic;
-  color: #555;
-}
-
-.admon-listen .admon-body {
-  text-align: center;
-}
-
-.admon-listen .listen-container {
-  position: relative;
-  width: 100%;
-  max-width: 660px;
-  margin: 0 auto; /* Center the listen container */
-}
-
-.admon-listen .admon-body p:first-of-type {
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1em; /* Keep some bottom spacing before the listen item*/
-}
-
-/* Ensure the listen container doesn't add extra top spacing */
-.admon-listen .listen-container {
-  margin-top: 0;
-}
-
-.admon-listen .listen-container iframe {
-  width: 100%;
-  height: 175px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.admon-listen .admon-content {
-  padding: 20px;
-  text-align: center; /* Only center content in listen admonitions */
-}
-
-.mt-align-center {
-  text-align: center;
-}
-
-/* Objectives admon */
-.admon-objectives .admon-icon::before {
-  font-family: 'Font Awesome 5 Pro';
-  content: '\f648';
-  font-size: 1.2em;
-  font-weight: 700;
-  color: white;
 }
 
 .admon-objectives {
@@ -351,17 +274,16 @@ em {
   background-color: #127bc4;
 }
 
-/* Key Takeaways admon - Material theme uses deep orange */
-.admon-keys {
-  border-color: #f59e0b;
+.admon-objectives .admon-icon::before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f648';
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
 }
 
-.admon-keys .admon-icon::before {
-  font-family: 'Font Awesome 5 Pro';
-  content: '\f084';
-  font-weight: 400;
-  font-size: 1.2em;
-  color: ff6a33;
+.admon-keys {
+  border-color: #f59e0b;
 }
 
 .admon-keys .admon-header {
@@ -369,7 +291,14 @@ em {
   color: #5a3100;
 }
 
-/* Read admon - Material theme uses deep orange */
+.admon-keys .admon-icon::before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f084';
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #ff6a33;
+}
+
 .admon-read {
   border-color: #bda89b;
 }
@@ -379,7 +308,6 @@ em {
   color: #130400;
 }
 
-/* Example admon */
 .admon-example {
   border-color: #afd9f0;
 }
@@ -397,7 +325,6 @@ em {
   color: black;
 }
 
-/* Exercise admon */
 .admon-exercise {
   border-color: #a5b9da;
 }
@@ -406,6 +333,8 @@ em {
   background-color: #f5f8ff;
   color: #143160;
 }
+
+/* Usage Section */
 .usage-section {
   background-color: white;
   padding: 25px;
@@ -451,6 +380,7 @@ code {
   font-weight: 500;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .admons-grid {
     grid-template-columns: 1fr;
@@ -470,15 +400,13 @@ code {
     padding: 16px;
   }
 
-  .admon-video .video-container iframe {
-    height: 200px; /* Adjust video height for mobile */
-  }
-
+  .admon-video .video-container iframe,
   .admon-listen .listen-container iframe {
-    height: 200px; /* Adjust listen height for mobile */
+    height: 200px;
   }
 }
 
+/* Icon Reference */
 .icon-reference {
   background-color: white;
   padding: 25px;
@@ -519,14 +447,14 @@ code {
 .tooltip {
   position: relative;
   display: inline-block;
-  cursor: help; /* Indicate interactive element */
+  cursor: help;
   border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: max-content; /* Adjusts to content, no min-width needed */
-  max-width: 250px; /* Limit width for very long tooltips */
+  width: max-content;
+  max-width: 250px;
   background-color: #e7f6fe;
   color: #0a73a5;
   text-align: left;
@@ -538,27 +466,24 @@ code {
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
-  word-wrap: break-word; /* Ensures long words wrap to the next line */
-  pointer-events: auto; /* Allow interactions with tooltip content */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  word-wrap: break-word;
+  pointer-events: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tooltip:hover .tooltiptext,
 .tooltip:focus .tooltiptext {
-  /* Add focus for keyboard users */
   visibility: visible;
   opacity: 1;
 }
 
-/* Improved positioning to avoid clipping */
 .tooltip .tooltiptext::before {
-  /* Add a small triangle "arrow" */
   content: '';
   position: absolute;
-  bottom: -8px; /* Adjust as needed */
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   border-width: 8px 8px 0 8px;
@@ -566,12 +491,11 @@ code {
   border-color: #004d80 transparent transparent transparent;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 600px) {
   .tooltip .tooltiptext {
-    bottom: 105%; /* Adjust position for smaller screens */
+    bottom: 105%;
     left: 0;
-    transform: translateX(0); /* Align to left on small screens */
+    transform: translateX(0);
     width: 90%;
     max-width: 90%;
     text-align: center;
@@ -582,14 +506,14 @@ code {
   }
 }
 
-/* Default Collapsible */
+/* Collapsibles */
 .collapsible {
   display: flex;
   align-items: center;
   padding: 0.9em 1em;
   background-color: #edffeb;
   color: #002c07;
-  border: 1px solid #36843a; /* border visible even when closed */
+  border: 1px solid #36843a;
   border-radius: 6px;
   cursor: pointer;
   font-size: 18px;
@@ -598,49 +522,44 @@ code {
   transition: background-color 0.3s ease;
 }
 
-/* Align list markers with text inside collapsibles */
 .collapsible-content ol,
 .collapsible-content ul {
-  margin-left: 0.5em; /* adjust to match your non-list paragraph indent */
-  padding-left: 0.5em; /* ensures numbers/bullets sit inside border area */
+  margin-left: 0.5em;
+  padding-left: 0.5em;
   margin-top: 5px;
   margin-bottom: 5px;
-  list-style-position: outside; /* keeps bullets/numbers outside text block */
+  list-style-position: outside;
 }
 
 .collapsible-content li {
   margin-bottom: 0;
 }
 
-/* Add space between Material icon and heading text */
 .collapsible .material-icons {
-  margin-right: 8px; /* adjust as needed */
+  margin-right: 8px;
   vertical-align: middle;
 }
 
-.collapsible:hover {
-  background-color: #d9ffdb;
-}
-
+.collapsible:hover,
 .active,
 .collapsible:hover {
   background-color: #d9ffdb;
 }
 
 .collapsible:before {
-  content: '\2b'; /* FontAwesome 7 Free icon */
+  content: '\2b';
   font-family: 'Font Awesome 7 Free';
   font-weight: 600;
   font-size: 0.6em;
-  margin-right: 12px; /* <-- space between + and Material icon */
-  margin-left: 4px; /* optional small indent */
+  margin-right: 12px;
+  margin-left: 4px;
 }
 
 .active:before {
-  content: '\f068'; /* FontAwesome 7 Free icon */
+  content: '\f068';
   font-family: 'Font Awesome 7 Free';
   font-weight: 900;
-  margin-right: 12px; /* keep same spacing for consistency */
+  margin-right: 12px;
   margin-left: 4px;
 }
 
@@ -648,69 +567,72 @@ code {
   max-height: 0;
   overflow: hidden;
   background-color: #f8fff8;
-  border: 1px solid transparent; /* prepare for animated border expansion */
-  border-top: none; /* avoids double border between header and content */
+  border: 1px solid transparent;
+  border-top: none;
   border-radius: 0 0 6px 6px;
   transition: max-height 0.4s ease-out, border-color 0.3s ease;
   padding: 0 10px;
 }
 
-/* Expanded state (when JS adds 'active' class) */
 .active + .collapsible-content {
-  border-color: #36843a; /* match header border */
-  max-height: 500px; /* large enough to fit your content */
-  padding: 20px; /* visible inner spacing when open */
+  border-color: #36843a;
+  max-height: 500px;
+  padding: 20px;
   font-size: 18px;
 }
 
-/* FOR OTHER COLLAPSIBLE VARIANTS*/
-/* Example: Read the Case variant */
+/* Collapsible variants */
 .collapsible-read {
   background-color: #f6f3f1;
   color: #130400;
   border-color: #bda89b;
 }
+
 .collapsible-read:hover,
 .collapsible-read.active {
   background-color: #f0edec;
 }
+
 .collapsible-read:before,
 .collapsible-read.active:before {
   color: #130400;
 }
+
 .collapsible-read.active + .collapsible-content {
   border-color: #bda89b;
-  background-color: white; /* warm pale orange */
+  background-color: white;
 }
 
 .collapsible-read + .collapsible-content {
   background-color: white;
 }
 
-/* Example Orange (warning) */
 .collapsible-orange {
   background-color: #fff4e5;
   color: #5a3100;
   border-color: #f59e0b;
 }
+
 .collapsible-orange:hover,
 .collapsible-orange.active {
   background-color: #ffe9cc;
 }
+
 .collapsible-orange:before,
 .collapsible-orange.active:before {
   color: #5a3100;
 }
+
 .collapsible-orange.active + .collapsible-content {
   border-color: #f59e0b;
-  background-color: #fff7eb; /* warm pale orange */
+  background-color: #fff7eb;
 }
 
 .collapsible-orange + .collapsible-content {
   background-color: #fff7eb;
 }
 
-/* Elissions/Ellipsis */
+/* Elisions */
 .elide-ellipsis,
 .hide-btn {
   display: inline;
@@ -722,38 +644,28 @@ code {
   margin: 0;
   border: none;
   background: none;
-  color: #0000cc; /* Subtle blue cue — adjust as needed */
+  color: #0000cc;
   cursor: pointer;
-  text-decoration: none; /* Light underline to signal interactivity */
+  text-decoration: none;
 }
 
 .elide-ellipsis:hover,
 .hide-btn:hover {
-  color: #004999; /* Darker on hover */
+  color: #004999;
   text-decoration: underline solid;
 }
 
 .hide-btn .hide-word {
-  font-size: 0.9em; /* Smaller text inside brackets */
-  font-weight: normal; /* Optional: make it lighter than the brackets */
+  font-size: 0.9em;
+  font-weight: normal;
   font-style: italic;
 }
 
 .elide-ellipsis strong.elide-dots {
-  /* This ensures the dots are explicitly bold, overriding any parent style */
   font-weight: bold;
 }
 
-/* ---------------------------------------------------------------------------------- */
-/* --- START: Line-Height Fix for Custom Boxes (Added to match LibreTexts spacing) --- */
-/* ---------------------------------------------------------------------------------- */
-
-/* This uses the universal selector (*) and !important on all custom content 
-  containers to force the wider line-height (1.5) and override 
-  any highly specific or inherited global LibreTexts styles.
-  */
-
-/* 1. Target the content containers themselves and the parent boxes */
+/* --- START: Line-Height Fix for Custom Boxes (LibreTexts spacing) --- */
 .greenbox-scale,
 .greenbox-scale-content,
 .objectivesbox,
@@ -781,7 +693,6 @@ code {
   line-height: 1.5 !important;
 }
 
-/* 2. Target ALL descendant elements (p, ul, li, span, etc.) inside the custom content blocks */
 .greenbox-scale-content *,
 .objectivesbox-content *,
 .videobox-content *,
@@ -798,12 +709,7 @@ code {
   line-height: 1.5 !important;
 }
 
-/* ---------------------------------------------------------------------------------- */
-/* --- END: Line-Height Fix --- */
-/* ---------------------------------------------------------------------------------- */
-/* This closing brace was present in the original file, closing a duplicated media query block. It is kept here for file consistency. */
-/* ---Expandable for Editoral Notes and Attributions and Licensing--- */
-/* 1. Header Styling & Spacing (AFFECTS BOTH) */
+/* --- Expandables for Editorial Notes, Attributions, and Licensing --- */
 #editorial-header,
 #attributions-header {
   font-family: Inter, sans-serif !important;
@@ -813,25 +719,19 @@ code {
   margin-bottom: 0px !important;
 }
 
-/* 2. Content Styling, Indentation & Slide Transition Prep (AFFECTS BOTH) */
 #editorial-content,
 #attributions-content {
   font-family: Inter, sans-serif !important;
   font-size: 14px !important;
-
   padding-left: 25px !important;
   margin-top: 5px !important;
-
   transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
   overflow: hidden !important;
   height: auto;
 }
 
-/* 3. Hidden State (Triggers the slide-up/closed state - AFFECTS ALL) */
 .custom-expandable-content.is-hidden {
   height: 0 !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-
-/* --- END: Expandables for Editorial Notes and Attributions and Licensing --- */
