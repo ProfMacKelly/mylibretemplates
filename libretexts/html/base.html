@@ -258,17 +258,21 @@
       </div>
       <div class="collapsible-content">Case.</div>
       <p>x</p>
-      <div class="admon admon-exercise">
-        <div class="admon-header">
-          <div class="admon-icon"><span class="material-icons">quiz</span></div>
+<div class="admon admon-exercise">
+	<div class="admon-header">
+		<div class="admon-icon"><span class="material-icons">quiz</span></div>
 
-          <div class="admon-title">
-            <span class="mt-font-size-18">Exercise</span>
-          </div>
-        </div>
+		<div class="admon-title"><span class="mt-font-size-18">Exercise</span></div>
+	</div>
 
-        <div class="admon-body">Exercise.</div>
-      </div>
+	<div class="admon-body">Exercise
+		<p id="answer-header" onclick="toggleCustomExpandable('answer-header', 'answer-content')" style="cursor: pointer"><span id="answer-arrow" style="display:inline-block;transition:transform 0.2s ease-in-out;">+</span> <span>Answer</span></p>
+
+		<div class="custom-expandable-content is-hidden" id="answer-content">
+			<p>Answer.</p>
+		</div>
+	</div>
+</div>
 
       <p>x</p>
 
