@@ -21,7 +21,7 @@ body {
 }
 
 .notes-list li::marker {
-	content: "[" counter(list-item) "] ";
+	content: " counter(list-item) ";
 	font-size: 12px;
 }
 
