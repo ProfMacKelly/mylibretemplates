@@ -99,24 +99,30 @@ for (i = 0; i < coll.length; i++) {
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.answer-header').forEach(header => {
-        header.addEventListener('click', function () {
-          const targetId = this.getAttribute('data-target');
-          const content = document.getElementById(targetId);
-          const arrow = this.querySelector('.answer-arrow');
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.answer-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      const arrow = this.querySelector('.answer-arrow i');
 
-          const isHidden = content.classList.contains('is-hidden');
-          this.classList.toggle('is-open');
+      const isHidden = content.classList.contains('is-hidden');
+      this.classList.toggle('is-open');
 
-          if (isHidden) {
-            content.classList.remove('is-hidden');
-            slideToggleContent(content, true);
-            if (arrow) arrow.textContent = '−';
-          } else {
-            slideToggleContent(content, false);
-            if (arrow) arrow.textContent = '+';
-          }
-        });
-      });
+      if (isHidden) {
+        content.classList.remove('is-hidden');
+        slideToggleContent(content, true);
+        if (arrow) {
+          arrow.classList.remove('fa-angle-right');
+          arrow.classList.add('fa-angle-down');
+        }
+      } else {
+        slideToggleContent(content, false);
+        if (arrow) {
+          arrow.classList.remove('fa-angle-down');
+          arrow.classList.add('fa-angle-right');
+        }
+      }
     });
+  });
+});
