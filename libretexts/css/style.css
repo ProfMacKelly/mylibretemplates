@@ -22,7 +22,7 @@ body {
 }
 
 .notes-list li::marker {
-  font-size: inherit; /* match text size */
+  font-size: 12px;
 }
 
 /* =============================================================================
