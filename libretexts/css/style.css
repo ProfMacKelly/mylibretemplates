@@ -13,11 +13,15 @@ body {
    ========================================================================== */
 .notes-label {
   margin-bottom: 0;
-  font-size: 14px;	
+  font-size: 14px;
 }
 
 .notes-list {
   margin: 0;
+  font-size: 12px;
+}
+
+.notes-list li {
   font-size: 12px;
 }
 
