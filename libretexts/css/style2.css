@@ -335,14 +335,16 @@ em {
     color: #0372a6 !important;
     margin-bottom: -10px !important;
     cursor: pointer;
+	font-weight: 300;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.answer-arrow {
+.answer-arrow i {
     display: inline-block;
     transition: transform 0.2s ease-in-out;
+	font-size: 1rem;
     font-weight: bold;
 }
 
@@ -640,6 +642,52 @@ code {
 
 .elide-ellipsis strong.elide-dots {
 	font-weight: bold;
+}
+
+/* =============================================================================
+   LINE-HEIGHT FIX (LibreTexts Compatibility)
+   ========================================================================== */
+.greenbox-scale,
+.greenbox-scale-content,
+.objectivesbox,
+.objectivesbox-content,
+.videobox,
+.videobox-content,
+.tanbox,
+.tanbox-content,
+.read,
+.read-content,
+.notebox,
+.notebox-content,
+.x1box,
+.x1box-content,
+.x2box,
+.x2box-content,
+.x3box,
+.x3box-content,
+.x4box,
+.x4box-content,
+.x5box,
+.x5box-content,
+.collapsible-content,
+.notes-list {
+	line-height: 1.5 !important;
+}
+
+.greenbox-scale-content *,
+.objectivesbox-content *,
+.videobox-content *,
+.tanbox-content *,
+.read-content *,
+.notebox-content *,
+.x1box-content *,
+.x2box-content *,
+.x3box-content *,
+.x4box-content *,
+.x5box-content *,
+.collapsible-content *,
+.notes-list * {
+	line-height: 1.5 !important;
 }
 
 /* =============================================================================
