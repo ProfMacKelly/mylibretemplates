@@ -74,78 +74,55 @@ for (i = 0; i < coll.length; i++) {
  * @param {HTMLElement} element The content element to slide.
  * @param {boolean} isOpening True if the content should open (slide down).
  */
-function slideToggleContent(element, isOpening) {
-  if (isOpening) {
-    // --- OPENING (Slide Down) ---
 
-    // 1. Ensure the element is visible for height calculation
-    element.style.height = 'auto';
+    function slideToggleContent(element, isOpening) {
+      if (isOpening) {
+        element.style.height = 'auto';
+        const contentHeight = element.scrollHeight;
+        element.style.height = '0';
+        requestAnimationFrame(() => {
+          element.style.height = contentHeight + 'px';
+        });
+        element.addEventListener('transitionend', function handler() {
+          element.style.height = 'auto';
+          element.removeEventListener('transitionend', handler);
+        });
+      } else {
+        element.style.height = element.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          element.style.height = '0';
+        });
+        element.addEventListener('transitionend', function handler() {
+          element.classList.add('is-hidden');
+          element.removeEventListener('transitionend', handler);
+        });
+      }
+    }
 
-    // 2. Get the natural height of the content (the actual height)
-    const contentHeight = element.scrollHeight;
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.answer-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      const arrow = this.querySelector('.answer-arrow i');
 
-    // 3. Set height to 0 immediately (this happens too fast to see)
-    element.style.height = '0';
+      const isHidden = content.classList.contains('is-hidden');
+      this.classList.toggle('is-open');
 
-    // 4. In the next animation frame, set the height to the actual content height
-    // This triggers the CSS transition from 0 to contentHeight
-    requestAnimationFrame(() => {
-      element.style.height = contentHeight + 'px';
+      if (isHidden) {
+        content.classList.remove('is-hidden');
+        slideToggleContent(content, true);
+        if (arrow) {
+          arrow.classList.remove('fa-angle-right');
+          arrow.classList.add('fa-angle-down');
+        }
+      } else {
+        slideToggleContent(content, false);
+        if (arrow) {
+          arrow.classList.remove('fa-angle-down');
+          arrow.classList.add('fa-angle-right');
+        }
+      }
     });
-
-    // 5. After the transition ends, clear the height so the content can be responsive again
-    element.addEventListener('transitionend', function handler() {
-      element.style.height = 'auto';
-      element.removeEventListener('transitionend', handler);
-    });
-  } else {
-    // --- CLOSING (Slide Up) ---
-
-    // 1. Set the height explicitly to its current size (before changing it to 0)
-    element.style.height = element.scrollHeight + 'px';
-
-    // 2. In the next frame, set the height to 0.
-    // This triggers the CSS transition from current size to 0
-    requestAnimationFrame(() => {
-      element.style.height = '0';
-    });
-
-    // 3. After the transition ends, re-apply the 'is-hidden' class
-    element.addEventListener('transitionend', function handler() {
-      element.classList.add('is-hidden');
-      element.removeEventListener('transitionend', handler);
-    });
-  }
-}
-
-/**
- * Main toggle function called by the header click.
- */
-function toggleCustomExpandable(headerId, contentId) {
-  const header = document.getElementById(headerId);
-  const content = document.getElementById(contentId);
-
-  // Find the first <span> inside the header that serves as the icon
-  const icon = header.querySelector("span[id$='arrow']");
-
-  // Check if content is hidden
-  const isCurrentlyHidden = content.classList.contains('is-hidden');
-
-  // Toggle open state class
-  header.classList.toggle('is-open');
-
-  if (isCurrentlyHidden) {
-    // Opening
-    content.classList.remove('is-hidden');
-    slideToggleContent(content, true);
-
-    // Swap icon to minus
-    if (icon) icon.textContent = '−';
-  } else {
-    // Closing
-    slideToggleContent(content, false);
-
-    // Once animation completes, swap icon back to plus
-    if (icon) icon.textContent = '+';
-  }
-}
+  });
+});
