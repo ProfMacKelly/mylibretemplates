@@ -12,12 +12,16 @@ body {
    FOOTNOTES
    ========================================================================== */
 .notes-label {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .notes-list {
-	margin: 0;
-	font-size: 12px;
+  margin: 0;
+  font-size: 12px;
+}
+
+.notes-list li::marker {
+  font-size: inherit; /* match text size */
 }
 
 /* =============================================================================
