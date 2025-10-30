@@ -648,51 +648,6 @@ code {
 	font-weight: bold;
 }
 
-/* =============================================================================
-   LINE-HEIGHT FIX (LibreTexts Compatibility)
-   ========================================================================== */
-.greenbox-scale,
-.greenbox-scale-content,
-.objectivesbox,
-.objectivesbox-content,
-.videobox,
-.videobox-content,
-.tanbox,
-.tanbox-content,
-.read,
-.read-content,
-.notebox,
-.notebox-content,
-.x1box,
-.x1box-content,
-.x2box,
-.x2box-content,
-.x3box,
-.x3box-content,
-.x4box,
-.x4box-content,
-.x5box,
-.x5box-content,
-.collapsible-content,
-.notes-list {
-	line-height: 1.5 !important;
-}
-
-.greenbox-scale-content *,
-.objectivesbox-content *,
-.videobox-content *,
-.tanbox-content *,
-.read-content *,
-.notebox-content *,
-.x1box-content *,
-.x2box-content *,
-.x3box-content *,
-.x4box-content *,
-.x5box-content *,
-.collapsible-content *,
-.notes-list * {
-	line-height: 1.5 !important;
-}
 
 /* =============================================================================
    EDITORIAL / ATTRIBUTION EXPANDABLES
