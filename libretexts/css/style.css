@@ -366,6 +366,82 @@ em {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+
+.attrib-header {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: -10px !important;
+  cursor: pointer;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.attrib-arrow i {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.attrib-content {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.attrib-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.editorial-header {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: -10px !important;
+  cursor: pointer;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.editorial-arrow i {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.editorial-content {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.editorial-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
 /* =============================================================================
    SUPPORTING SECTIONS (Usage, Icon Reference)
    ========================================================================== */
@@ -649,28 +725,6 @@ code {
 }
 
 
-/* =============================================================================
-   EDITORIAL / ATTRIBUTION EXPANDABLES
-   ========================================================================== */
-#editorial-header,
-#attributions-header {
-	font-family: Montserrat, sans-serif !important;
-	font-size: 14px !important;
-	font-weight: bold !important;
-	color: #0372a6 !important;
-	margin-bottom: 0px !important;
-}
-
-#editorial-content,
-#attributions-content {
-	font-family: Montserrat, sans-serif !important;
-	font-size: 14px !important;
-	padding-left: 25px !important;
-	margin-top: 5px !important;
-	transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
-	overflow: hidden !important;
-	height: auto;
-}
 
 
 .custom-expandable-content.is-hidden {
