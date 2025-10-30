@@ -717,22 +717,6 @@ code {
 	height: auto;
 }
 
-#answer-header {
-	font-family: Montserrat, sans-serif !important;
-	font-size: 18px !important;
-	font-weight: bold !important;
-	color: #0372a6 !important;
-	margin-bottom: -10px !important;
-}
-
-#answer-content {
-	font-family: Montserrat, sans-serif !important;
-	font-size: 18px !important;
-	padding-left: 25px !important;
-	transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
-	overflow: hidden !important;
-	height: auto;
-}
 
 .custom-expandable-content.is-hidden {
 	height: 0 !important;
